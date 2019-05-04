@@ -18,8 +18,6 @@ $(document).ready(function () {
         }
     });
 
-    (function ($) {
-        $(document).ready(function(){
             var prevScrollPos = 0;
 
             $(window).scroll(function () {
@@ -36,8 +34,6 @@ $(document).ready(function () {
                 prevScrollPos=currentScrollPos;
 
             });
-        });
-    }(jQuery));
 
 
 });

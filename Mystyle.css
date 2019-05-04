@@ -3,8 +3,8 @@ html{
 }
 
 footer {
-    display: block;
-    position: sticky;
+    display: block!important;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
