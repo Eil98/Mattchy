@@ -18,18 +18,26 @@ $(document).ready(function () {
         }
     });
 
-    var prevScrollPos=$(window).pageYOffset;
-    $(window).scroll(function () {
-        var currentScrollPos=$(window).pageYOffset;
-        //var isDown=currentScrollPos>prevScrollPos;
-        if(currentScrollPos>prevScrollPos){
-            $("#navbar").addClass("scrolled");
-        }else if ( currentScrollPos<prevScrollPos ){
-            $("#navbar").removeClass("scrolled");
-        }
-        prevScrollPos=currentScrollPos;
+    (function ($) {
+        $(document).ready(function(){
+            var prevScrollPos = 0;
 
-    });
+            $(window).scroll(function () {
+
+                var currentScrollPos=$(window).scrollTop();
+                console.log(currentScrollPos + " + " + prevScrollPos);
+                if(currentScrollPos>prevScrollPos){
+                    //var isDown=currentScrollPos>prevScrollPos;
+                    console.log("CIAOO");
+                    $("#navbar").addClass("hidden");
+                }else if ( currentScrollPos<prevScrollPos ){
+                    $("#navbar").removeClass("hidden");
+                }
+                prevScrollPos=currentScrollPos;
+
+            });
+        });
+    }(jQuery));
 
 
 });
