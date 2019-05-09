@@ -2,27 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Mattchy</title>
     <link rel="stylesheet"  type="text/css" href=" Mystyle.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-    <script src="Script2.js"></script>
+    <link rel="stylesheet " type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+
 
 </head>
 
 <body>
-<header>
+
+
+<header class="">
+
+
+
+
 
 
         <div id="navbar" class="">
-            <div id="icon">
-                <i class="fa fa-bars"></i>
+
+            <div id="wrapIcon">
+
+                <div id="hamb">
+                    <i class="fa fa-bars"></i>
+                </div>
+                    <div id="logoMob"><a href="#"><img src="cuttedlogo.png" width="56"></a></div>
+                <div id="searchContainer">
+
+                    <form action="#">
+                        <i class="fa fa-search search"></i>
+                        <input type="text" class="inputField" placeholder="Search...">
+                    </form>
+
+                </div>
             </div>
+
+
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">JavaScript <i class="fa fa-sort-desc"></i></a>
+
+                <li id="logoDex"><a href="#"><img src="cuttedlogo.png" width="48.4"></a>
+                <li class="subMenu"><a href="#">Categorie<i class="fa fa-sort-desc"></i></a>
                     <ul>
                         <li><a href="#">jQuery</a></li>
                         <li><a href="#">Vanilla JavaScript</a></li>
@@ -30,7 +54,7 @@
                         <li><a href="#">VueJS</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Graphic Design <i class="fa fa-sort-desc"></i></a>
+                <li class="subMenu"><a  href="#">Il tuo account <i class="fa fa-sort-desc"></i></a>
                     <ul>
                         <li><a href="#">Font</a></li>
                         <li><a href="#">PSD</a></li>
@@ -38,106 +62,149 @@
                         <li><a href="#">Texture</a></li>
                     </ul>
                 </li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <li id="shopCart"><a href="#" ><i class="fa fa-shopping-cart"> Shopping-Cart</i></a></li>
+               <li>
+                   <div id="searchContainerMob">
+
+                    <form action="#">
+                        <i class="fa fa-search search "></i>
+                        <input type="text" class="inputField" placeholder="Search...">
+                    </form>
+
+                </div>
+               </li>
+
             </ul>
+
         </div>
+
+
+
 </header>
+<br>
+<br>
+<br>
+<div class="container-fluid">
 
-<div>
-    <p>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-        aaaa <br>
-
-    </p>
-
-
-    <footer>
-        <p>Footer</p>
-
-    </footer>
+    <div class="row">
+        <div class="col-sm-4">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
+    <footer>
+        <div id="footerSup">
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="footerInf">
+            <br>
+            <br>
 
+        </div>
+
+    </footer>
+
+<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+<script src="jquery.js"></script>
+<script src="Script2.js"></script>
 
 </body>
 </html>

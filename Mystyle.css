@@ -2,15 +2,9 @@ html{
     font-weight: 400;
 }
 
-footer {
-    display: block!important;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: darkgreen;
-    color: white;
-    text-align: center;
+
+header{
+    font-size: 13px;
 }
 
 body {
@@ -20,55 +14,94 @@ body {
 h1 { margin: 150px auto; text-align: center; }
 
 
-            /*Navbar*/
+/*Navbar*/
 #navbar{
 
 
     width: 100%;
     top:0;
     position: fixed;
-    /* your height */
-    height: 56px;
-    /* .... */
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    -webkit-transition: -webkit-transform .3s;
-    -moz-transition: -moz-transform .3s;
-    -o-transition: transform .3s;
-    transition: transform .3s;
 }
-#navbar .scrolled {
-    /* subtract your height */
-    -webkit-transform: translate3d(0,-56px,0);
-    -moz-transform: translate3d(0,-56px,0);
-    transform: translate3d(0,-56px,0);
-}
+        /* ICONS */
+#wrapIcon{
+    background: #333333;
 
-#icon {
+}
+#hamb{
     background: #333333;
     color: #ffffff;
     font-size: 24px;
     padding: 0.6em;
-    cursor: pointer;
     display: none;
+    cursor: pointer;
+}
+
+#logoDex{
+    display: inline-block;
+}
+
+#logoMob{
+
+    display: none;
+    position: absolute;
+    padding-top: 15px;
+
+    left:45%;
+}
+
+#shopCart{
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: -5px;
+}
+
+#searchContainer{
+    display: inline-block;
+   float: right;
+    padding-top: 15px;
 
 
 }
+#searchContainerMob{
+
+    display: none;
+
+}
+.search {
+    color: #ffffff;
+    font-size: 16px;
+    border: black;
+}
+
+.inputField{
+
+
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: whitesmoke;
+}
+
+
+
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     background: #333333 ;
-    position:relative;
+
 }
 
 ul li {
     display: inline-block;
+
 }
 
 ul li a {
     color:#ffffff;
+    cursor: pointer;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -88,33 +121,51 @@ ul ul {
 ul ul li {
     display: block;
     background: #6666;
+
 }
 
-ul li:hover ul {
-    display: block;
-}
 
 ul li i {
     color: #ffffff;
-    float: right;
     padding-left: 20px;
 }
 
 
 
 @media(max-width: 768px) {
-    #icon {
-        display: block;
+    #hamb{
+        display: inline-block;
     }
-
+    #logoDex{
+        display: none;
+    }
+    #logoMob{
+        display: inline-block;
+    }
+    #searchContainer{
+        display:none ;
+    }
+    #searchContainerMob{
+        display: inline-block;
+    }
+    .inputField{
+        width: 100px;
+        font-size: 13px;
+    }
+    .search{
+        font-size: 14px;
+    }
     ul {
         display: none;
-        position: static;
+
         background: #333333;
     }
 
     ul li {
         display: block;
+        position: relative;
+        zoom: 1;
+
     }
 
     ul ul {
@@ -124,8 +175,35 @@ ul li i {
 }
 
 
-.hidden{
-    visibility: hidden!important;
+@media(max-width: 263px){
+
+    .inputField{
+        width:70px;
+    }
+
 }
 
 
+.hidden{
+    visibility: hidden!important;
+}
+.subMenu{
+
+}
+        /* Footer*/
+
+footer {
+    display: block!important;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+#footerInf{
+    background-color: #333333;
+}
+#footerSup{
+    background-color: #4d4d4d;
+}
