@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#333333">
     <title>Mattchy</title>
     <link rel="stylesheet"  type="text/css" href=" Mystyle.css">
-
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link rel="stylesheet " type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
 
 
+
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -85,126 +89,265 @@
 <br>
 <br>
 <br>
+
 <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    <div class= "btn-toolbar justify-content-center" role="group" >
 
-    <div class="row">
-        <div class="col-sm-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="btn-toolbar" role="rowgroup">
+
+            <div class="btn-group-sm dropdown margin-flter" role="group" aria-label="">
+                <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
+                    Category
+                </button>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">T-shirt</a>
+                    <a class="dropdown-item" href="#">Pants</a>
+                    <a class="dropdown-item" href="#">Jackets</a>
+                </div>
+
+            </div>
+
+            <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
+                    Gender
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">F</a>
+                    <a class="dropdown-item" href="#">M</a>
+                </div>
+            </div>
+
+            <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Brand
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Gucci</a>
+                    <a class="dropdown-item" href="#">Balenciaga</a>
+                    <a class="dropdown-item" href="#">Stone Island</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-toolbar" role="rowgroup">
+
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+            <!--<div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
+                    Sizes
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">XS</a>
+                    <a class="dropdown-item" href="#">S</a>
+                    <a class="dropdown-item" href="#">M</a>
+                    <a class="dropdown-item" href="#">L</a>
+                    <a class="dropdown-item" href="#">XL</a>
+                    <a class="dropdown-item" href="#">XXL</a>
+                </div>
+            </div>
+
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+           <!-- <div class="dropdown col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                Sort by
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Price Lower-Higher</a>
+                    <a class="dropdown-item" href="#">Price Higher-Lower</a>
+                    <a class="dropdown-item" href="#">Alphabetical (A-Z)</a>
+                </div>
+            </div>
+
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+           <!-- <div class=" col-sm-6 col-md-4 col-lg-2 col-xl-2">-->
+                <button type="button" class="btn btn-outline-danger ">Reset Filters</button>
+            </div>
+
+        </div>
+    </div>
+
+<!--
+    <div class="btn-group">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" id="menu1"type="button" data-toggle="dropdown" >
+                Categorie
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="menu1">
+                <a class="dropdown-item" href="#">T-shirt</a>
+                <a class="dropdown-item" href="#">Pants</a>
+                <a class="dropdown-item" href="#">Jackets</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort by
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                <a class="dropdown-item" href="#">Price</a>
+                <a class="dropdown-item" href="#">Name</a>
+            </div>
+        </div>
+    </div>
+-->
+        <div class="card-group">
+
+            <div class="card text-center">
+                <img src="prova.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
+                    <h5 class="card-title">Card title</h5>
+
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button class="btn btn-primary " >Add to cart</button>
+                </div>
+            </div>
+            <div class="card text-center">
+                <img src="prova.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
+                    <h5 class="card-title">Card title</h5>
+
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button class="btn btn-primary " >Add to cart</button>
+                </div>
+            </div>
+            <div class="card text-center">
+                <img src="prova.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
+                    <h5 class="card-title">Card title</h5>
+
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button class="btn btn-primary " >Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+
+        <div class="card text-center">
+            <img src="prova.jpg" class="card-img-top" alt="...">
             <div class="card-body">
+                <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
                 <h5 class="card-title">Card title</h5>
+
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <button class="btn btn-primary " >Add to cart</button>
             </div>
         </div>
-        </div>
-        <div class="col-sm-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="card text-center">
+            <img src="prova.jpg" class="card-img-top" alt="...">
             <div class="card-body">
+                <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <button class="btn btn-primary " >Add to cart</button>
             </div>
         </div>
-        </div>
-        <div class="col-sm-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="card text-center">
+            <img src="prova.jpg" class="card-img-top" alt="...">
             <div class="card-body">
+                <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <button class="btn btn-primary " >Add to cart</button>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+        <div class="card-group">
+
+        <div class="card text-center">
+            <img src="prova.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
+                <h5 class="card-title">Card title</h5>
+
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <button class="btn btn-primary " >Add to cart</button>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+        <div class="card text-center">
+            <img src="prova.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
+                <h5 class="card-title">Card title</h5>
+
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <button class="btn btn-primary " >Add to cart</button>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+        <div class="card text-center">
+            <img src="prova.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <button class="btn btn-link heart" style="float: right"><i class="far fa-heart "></i> </button>
+                <h5 class="card-title">Card title</h5>
+
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <button class="btn btn-primary " >Add to cart</button>
             </div>
         </div>
     </div>
+
 </div>
+        <footer>
+            <div id="footerSup">
+                <div>
+                   <i class=" foot-icon fas fa-lock"></i><br>
+                </div>
+                <bold>Secure payment</bold>
+                <p style="font-weight: lighter"> thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
+                <br>
+                <div>
+                <i class="foot-icon fas fa-check"></i><br>
+                </div>
+                <bold>Free shipping</bold>
+                <p style="font-weight: lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
+                <hr>
+
+                <bold>Client Service</bold>
+
+              <p style="font-weight: lighter">  Email:info@mattchy.com</p>
+                <br>
+                <br>
+                <hr>
+                <bold>Social</bold>
+                <br>
+                <br>
+                <div>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"> <i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div id="footerInf">
+                © 2002-2019 - GRAFFITISHOP® è un marchio registrato di proprietà di Pluss srl, via F.d'Ovidio, 3 Milano
+                    <br>Reg. Imp. Cam. Comm. PV 02225020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02225020185
 
 
-    <footer>
-        <div id="footerSup">
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-        <div id="footerInf">
-            <br>
-            <br>
+            </div>
 
-        </div>
+        </footer>
 
-    </footer>
+    <script src="jquery.js"></script>
+    <script src="script1.js"></script>
 
-<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-
-<script src="jquery.js"></script>
-<script src="Script2.js"></script>
-
-</body>
-</html>
+    </body>
+    </html>

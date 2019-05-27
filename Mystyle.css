@@ -1,5 +1,6 @@
 html{
     font-weight: 400;
+    font-family: SansSerif;
 }
 
 
@@ -9,7 +10,6 @@ header{
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 h1 { margin: 150px auto; text-align: center; }
 
@@ -21,7 +21,9 @@ h1 { margin: 150px auto; text-align: center; }
     width: 100%;
     top:0;
     position: fixed;
+    z-index: 1;
 }
+
         /* ICONS */
 #wrapIcon{
     background: #333333;
@@ -203,7 +205,101 @@ footer {
 }
 #footerInf{
     background-color: #333333;
+    width: 100%;
+    font-size: 10px;
 }
-#footerSup{
+#footerSup {
     background-color: #4d4d4d;
+    width: 100%;
+
 }
+.fab {
+    padding: 10px;
+    font-size: 18px;
+    width: 37px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 50%;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+.fa-linkedin-in {
+    background-color: #007bb5;
+    color: white;
+}
+
+.fa-facebook-f {
+    background-color: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background-color:#55ACEE;
+    color: white;
+}
+.fa-pinterest-p {
+    background-color: #cb2027;
+    color: white;
+}
+.fa-instagram{
+    background-color: #ff33ff;
+    color: white;}
+
+.foot-icon{
+    padding: 10px;
+    font-size: 18px;
+    width: 37px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+
+    }
+.fa-lock{
+    background-color: #33cc33;
+    color: white;
+}
+.fa-check{
+    background-color: #33cc33;
+    color: white;
+}
+.fas:hover {
+    opacity: 0.7;
+}
+
+hr{
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    background-color: white;
+
+    width: 50%;
+    margin: auto;
+}
+
+        /* Cards*/
+.heart{}
+/* The overlay effect - lays on top of the container and over the image */
+
+.maxwidht{
+    width:100% ;
+}
+.backgroud-filter{
+    background-color: #f2f2f2;
+}
+.margin-flter{
+    margin-top: 2px;
+}
+.no-padding{
+    padding: 0px;
+    margin: 0px;
+}
+bold{
+    font-weight: 500;
+}
+
+
