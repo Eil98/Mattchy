@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#333333">
     <title>Mattchy</title>
-    <link rel="stylesheet"  type="text/css" href="Style1.css">
+    <link rel="stylesheet"  type="text/css" href="Style.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -39,7 +39,7 @@ $nome_database="sql01";
         <div class="overlay-content">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit" id="logSubmit"><i class="fa fa-search"></i></button>
             </form>
         </div>
     </div>
@@ -47,14 +47,15 @@ $nome_database="sql01";
     <div id="loginOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlayLog-content">
-            <form action="#">
+            <form action="main2.php" class="login-content" id="login-formGroup">
                 <p style="color: white; font-size: 40px">Login</p>
                 <br>
-                <input type="text" class="formOverlay" placeholder="Username" name="username" required="required">
+                <input type="email" class="formOverlay" id="emailLog" placeholder="Username" name="username" required="required">
                 <br>
-                <input type="password" class="formOverlay" placeholder="Password" name="password" required="required">
-                <a href="registrationacc.html">[Sign Up]Do you already have an account?If not,Click here!</a>
-                <button type="submit" class="buttonOverlay">Submit</button>
+                <input type="password" class="formOverlay" id="pwLog" placeholder="Password" name="password" required="required">
+               <!-- <a href="registrationacc.html">[Sign Up]Do you already have an account?If not,Click here!</a>-->
+                <button type="submit"  class="buttonOverlay" id="logsub">Submit</button>
+                <button type="button" class="buttonOverlay2" data-toggle="tooltip" data-placement="bottom" title="Create an account here!"><a href="registrationacc.html">Sign Up</a></button>
             </form>
         </div>
     </div>
@@ -95,16 +96,18 @@ $nome_database="sql01";
                 <li><a href="#"><i class="fas fa-envelope"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Contact</p></a></li>
                 <li id="shopCart"><a href="#" ><i class="fa fa-shopping-cart"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
 
-                <li class="subMenu">
-                                <?php if(isset($_SESSION[$username]))
-                                        {echo'<a href="#" ><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc"></i></a>
-                                            <ul>
-                                                <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
-                                                <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My Adresses</p></a></li>
-                                                <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
-                                                <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
-                                            </ul>';}
-                                        else{ echo'<a href="#" class="openBtnLog"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></div></a>';}?>
+                <li class="subMenu" id="submenu-user">
+                    <a href="#" class="openBtnLog" id="normalmenu"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+
+                    <div class="hidden" id="usermenu">
+                        <a href="#" ><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                            <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
+                            <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My Adresses</p></a></li>
+                            <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
+                            <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                        </ul>
+                    </di v>
                 </li>
 
 
@@ -459,6 +462,7 @@ $nome_database="sql01";
         </footer>
 
     <script src="jquery.js"></script>
+    <script src="loginProcess1.js"></script>
     <script src="script1.js"></script>
 
     </body>
