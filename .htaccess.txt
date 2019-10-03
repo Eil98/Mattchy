@@ -1,0 +1,4 @@
+#Test. //testare se funziona .htaccess
+
+RewriteEngine On
+RewriteRule ^/?([a-zA-Z-_0-9]+).uni?/?([a-zA-Z-_0-9]+)?/?([a-zA-Z-_0-9]+)?/?$ index.php?pagina=$1&option=$2&par=$3 [L]

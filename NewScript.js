@@ -51,41 +51,9 @@ $(document).ready(function () {
 
 
 
-    $(".dropdown").click(function() {
-        $(this).find('div').slideToggle();
-    });
 
 
 
-    $(".closeBtn").click(function () {
-        $("#searchOverlay").css("display","none");
-    });
-
-    $(".openBtn").click(function () {
-
-        $("#searchOverlay").css("display","block");
-
-    });
-
-
-    $(".closeBtn").click(function () {
-        $("#loginOverlay").css("display","none");
-
-    });
-
-    $(".openBtnLog").click(function () {
-        localStorage.setItem('access','null');
-        $("#loginOverlay").css("display","block");
-
-    });
-
-    $("#shopCartTrigg").click(function () {
-        $(location).attr('href','shoppingCart.html');
-    });
-
-    $("#logoHome").click(function () {
-        $(location).attr('href','main2.php');
-    });
 
 
 
