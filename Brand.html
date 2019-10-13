@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#333333">
     <title>Mattchy</title>
-    <link rel="stylesheet"  type="text/css" href="Style1.css">
+    <link rel="stylesheet"  type="text/css" href="StyleComune4.css">
+    <link rel="stylesheet"  type="text/css" href="StyleBrand2.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -17,23 +18,9 @@
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 </head>
-
 <body>
-<?php
-session_start();
-ini_set('display_errors',1);
-$localhost="localhost";
-$username="root";
-$password="root";
-$nome_database="sql01";
-
-
-
-?>
-
-<header class="">
-
-
+<header>
+    <!-- Overlay -->
     <div id="searchOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlay-content">
@@ -47,158 +34,62 @@ $nome_database="sql01";
     <div id="loginOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlayLog-content">
-            <form action="main2.php" class="login-content" id="login-formGroup">
+            <form action="" class="login-content" id="login-formGroup">
                 <p style="color: white; font-size: 40px">Login</p>
                 <br>
                 <input type="email" class="formOverlay" id="emailLog" placeholder="Username" name="username" required="required">
                 <br>
                 <input type="password" class="formOverlay" id="pwLog" placeholder="Password" name="password" required="required">
-                <!-- <a href="registrationacc.html">[Sign Up]Do you already have an account?If not,Click here!</a>-->
                 <button type="submit"  class="buttonOverlay" id="logsub">Submit</button>
                 <button type="button" class="buttonOverlay2" data-toggle="tooltip" data-placement="bottom" title="Create an account here!"><a href="registrationacc.html">Sign Up</a></button>
             </form>
         </div>
     </div>
-
-
-
-    <div id="navbar" class="">
-
-
+    <!-- Fine Overlay -->
+    <div id="navbar">
         <div id="wrapIcon">
-
             <div id="hamb">
                 <i class="fa fa-bars"></i>
             </div>
-            <div id="logoMob">//TODO logo click->Home
-                <a href="#" ><img src="LogoMattchy2.png" width="70"></a>
+            <div id="logoMob">
+                <a href="#" ><img  class="gotoHome" src="LogoMattchy2.png" width="70"></a>
             </div>
-
             <div class="searchwrap">
                 <button class="openBtn"><i class="fa fa-search "></i></button>
             </div>
-
-
         </div>
-
-
-        <ul>
-
-            <li id="logoDex"><a href="#" id="logoHome"><img src="LogoMattchy2.png" width="58"></a></li>                 <!--TODO logo click->Home-->
-            <li class="subMenu"><a href="#"><i class="fas fa-tshirt"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
-                <ul>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">jQuery</p></a></li>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Vanilla JavaScript</p></a></li>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">ReactJS</p></a></li>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">VueJS</p></a></li>
+        <ul class="menuUL">
+            <li id="logoDex" class="menuUL-LI"><a href="#"  class="menuUL-LI-A "><img class="gotoHome" src="LogoMattchy2.png" width="58"></a></li>
+            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
+                <ul class="menuUL-UL">
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Hoodies & Sweatshirts</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">T-Shirts & Shirt</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Pants</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shorts</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shoes</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Accessories</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Jackets & Coats</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Underwear & Swimwear</p></a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fas fa-industry"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
-            <li id="shopCart"><a href="#" id="shopCartTrigg"><i class="fa fa-shopping-cart"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
+            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
+            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
 
-            <li class="subMenu" id="submenu-user">
+            <li class="subMenu menuUL-LI" id="submenu-user">
                 <div id="normalmenu">
-                    <a href="#" class="openBtnLog"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
                 </div>
                 <div  id="usermenu">
-                    <a href="#" ><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc"></i></a>
-                    <ul>
-                        <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
-                        <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My Adresses</p></a></li>
-                        <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
-                        <li><a href="#" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
+                    <ul class="menuUL-UL">
+                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="wishlist"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="myorders"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
+                        <li class="menuUL-UL-Li"><a href="#" class="menuUL-LI-A" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
                     </ul>
                 </div>
             </li>
-
-
         </ul>
-
     </div>
-
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <div class="container-fluid">
-                        <div clas="row">
-                            <div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
-                                <h4 class="modal-title" id="exampleModalLabel">Login</h4>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 pull-right">
-                                <button type="button " class="chiudi" style="alignment: right" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <form action="controllalogin.php" method="post">
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div clas="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                    <form action="controllalogin.php" method="post">
-                                        <label>Nome utente:</label>
-                                </div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-                                    <input type="text" required style="width:90%;" class=" form-control" name="nome_ut" >
-                                </div>
-                            </div>
-
-                            <div clas="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                    <label>Password:</label>
-                                </div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-                                    <input type="password" required style="width:90%;"  class="max-width form-control" name="password">
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <input button type="button" class="button2" data-dismiss="modal" value="Chiudi">
-                        <input button type="submit" name="invia" value="Accedi" class="button">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
 </header>
 <br>
 <br>
@@ -211,17 +102,197 @@ $nome_database="sql01";
             <li class="breadcrumb-item active" aria-current="page">Library</li>
         </ol>
     </nav>
-    <div class="brandList">
-        
+
+    <h4 class="brandtitle">All Brands</h4><br>
+    <div class="row" >
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <ul class="brandList">
+                <li class="brandItem">
+                    <span class="firtLetter">A</span><br>
+                    <a href="" class="brandLink">Adidas Originals</a><br>
+                    <a href="" class="brandLink">Asics</a><br>
+                    <a href="" class="brandLink">Australian</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">B</span><br>
+                    <a href="" class="brandLink">Burton</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">C</span><br>
+                    <a href="" class="brandLink">Carhartt</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">D</span><br>
+                    <a href="" class="brandLink">Dickies</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">F</span><br>
+                    <a href="" class="brandLink">Fila</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">I</span><br>
+                    <a href="" class="brandLink">Iuter</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">L</span><br>
+                    <a href="" class="brandLink">Levi's</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <ul class="brandList">
+                <li class="brandItem">
+                    <span class="firtLetter">M</span><br>
+                    <a href="" class="brandLink">Mitchell & Ness</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">N</span><br>
+                    <a href="" class="brandLink">New Era</a><br>
+                    <a href="" class="brandLink">Nike</a><br>
+                    <a href="" class="brandLink">Nixon</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">O</span><br>
+                    <a href="" class="brandLink">Obey</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">P</span><br>
+                    <a href="" class="brandLink">Patagonia</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">R</span><br>
+                    <a href="" class="brandLink">Reebook</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">S</span><br>
+                    <a href="" class="brandLink">Stussy</a>
+                </li>
+                <li class="brandItem">
+                    <span class="firtLetter">T</span><br>
+                    <a href="" class="brandLink">The North Face</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<h1>Adidas Originals</h1><br>
+    <div class="wrapperImage">
+        <img class="brandLogo" src="adidas-originals.png">
+    </div>
+    <p>Every epic story has a great start and the Dassler one begins in Germany: first Adidas trainers ever go back to
+        1924 and were key players in assuring Jesse Owens his three iconic gold medals at the Berlin Olympic Games in 1936,
+        leading to the patent of the instant-classic Three Stripes logo.</p><br>
+    <h6>Review this brand</h6>
+    <fieldset class="rating">
+        <input type="radio"  class="rate" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+        <input type="radio"  class="rate" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+        <input type="radio"  class="rate" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+        <input type="radio"  class="rate" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+        <input type="radio"  class="rate" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    </fieldset>
+    <br><br>
+
+    <div class="reviewContainer">
+        <span class="heading">User Rating</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p>4.1 average based on 254 reviews.</p>
+        <hr style="border:2px solid #e9ecef">
+
+        <div class="row">
+            <div class="side">
+                <div>5 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-5"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>150</div>
+            </div>
+            <div class="side">
+                <div>4 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-4"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>63</div>
+            </div>
+            <div class="side">
+                <div>3 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-3"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>15</div>
+            </div>
+            <div class="side">
+                <div>2 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-2"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>6</div>
+            </div>
+            <div class="side">
+                <div>1 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-1"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>20</div>
+            </div>
+        </div>
+
+
 
     </div>
-
-
-
-
-
-
-
+    <hr style="border:1px solid #333333;width: 100%">
+    <h1>Asics</h1><br>
+    <div class="wrapperImage">
+        <img class="brandLogo" src="asics.png">
+    </div>
+    <p>Left unemployed after returning from the II World War, in 1949 Kihaciro Onitsuka established a company selling boots for students that relies on the favorite motto of his old comrade: "Anima Sana In Corpore Sano" didn't only become the push to
+        Kihaciro intentions of building a product able to improve the quality of kids life, but also the acronym of a pivotal brand bound to write pages and pages of lifestyle sneakers history. </p><br>
+    <h6>Send a review about this brand</h6>
+    <fieldset class="rating">
+        <input type="radio"  class="rate" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+        <input type="radio"  class="rate" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+        <input type="radio"  class="rate" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+        <input type="radio"  class="rate" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+        <input type="radio"  class="rate" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    </fieldset>
+    <br><br>
 </div>
 <footer>
     <div id="footerSup">
@@ -266,7 +337,8 @@ $nome_database="sql01";
 
 <script src="jquery.js"></script>
 <script src="loginProcess2.js"></script>
-<script src="script1.js"></script>
+<script src="script38.js"></script>
+<script src="BrandScript1.js"></script>
 
 </body>
 </html>

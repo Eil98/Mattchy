@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#333333">
+    <title>Mattchy</title>
+
+    <link rel="stylesheet"  type="text/css" href="StyleComune4.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet " type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+<!-- Overlay -->
+    <div id="searchOverlay" class="overlay">
+        <span class="closeBtn" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit" id="logSubmit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginOverlay" class="overlay">
+        <span class="closeBtn" title="Close Overlay">×</span>
+        <div class="overlayLog-content">
+            <form action="" class="login-content" id="login-formGroup">
+                <p style="color: white; font-size: 40px">Login</p>
+                <br>
+                <input type="email" class="formOverlay" id="emailLog" placeholder="Username" name="username" required="required">
+                <br>
+                <input type="password" class="formOverlay" id="pwLog" placeholder="Password" name="password" required="required">
+                <button type="submit"  class="buttonOverlay" id="logsub">Submit</button>
+                <button type="button" class="buttonOverlay2" data-toggle="tooltip" data-placement="bottom" title="Create an account here!"><a href="registrationacc.html">Sign Up</a></button>
+            </form>
+        </div>
+    </div>
+    <!-- Fine Overlay -->
+    <div id="navbar">
+        <div id="wrapIcon">
+            <div id="hamb">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="logoMob">
+                <a href="#" ><img  class="gotoHome" src="LogoMattchy2.png" width="70"></a>
+            </div>
+            <div class="searchwrap">
+                <button class="openBtn"><i class="fa fa-search "></i></button>
+            </div>
+        </div>
+        <ul class="menuUL">
+            <li id="logoDex" class="menuUL-LI"><a href="#"  class="menuUL-LI-A "><img class="gotoHome" src="LogoMattchy2.png" width="58"></a></li>
+            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
+                <ul class="menuUL-UL">
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Hoodies & Sweatshirts</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">T-Shirts & Shirt</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Pants</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shorts</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shoes</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Accessories</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Jackets & Coats</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Underwear & Swimwear</p></a></li>
+                </ul>
+            </li>
+            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
+            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
+
+            <li class="subMenu menuUL-LI" id="submenu-user">
+                <div id="normalmenu">
+                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+                </div>
+                <div  id="usermenu">
+                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
+                    <ul class="menuUL-UL">
+                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="wishlist"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="myorders"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
+                        <li class="menuUL-UL-Li"><a href="#" class="menuUL-LI-A" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<br>
+<br>
+<br>
+
+<div class="container-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    <div class= "btn-toolbar justify-content-center" role="group" >
+
+        <div class="btn-toolbar" role="rowgroup">
+
+            <div class="btn-group-sm dropdown margin-flter" role="group" aria-label="">
+                <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
+                    Category
+                </button>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">T-shirt</a>
+                    <a class="dropdown-item" href="#">Pants</a>
+                    <a class="dropdown-item" href="#">Jackets</a>
+                </div>
+
+            </div>
+
+            <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
+                    Gender
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">F</a>
+                    <a class="dropdown-item" href="#">M</a>
+                </div>
+            </div>
+
+            <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Brand
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Gucci</a>
+                    <a class="dropdown-item" href="#">Balenciaga</a>
+                    <a class="dropdown-item" href="#">Stone Island</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Filtri -->
+
+        <div class="btn-toolbar" role="rowgroup">
+
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <!--<div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
+                    Sizes
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">XS</a>
+                    <a class="dropdown-item" href="#">S</a>
+                    <a class="dropdown-item" href="#">M</a>
+                    <a class="dropdown-item" href="#">L</a>
+                    <a class="dropdown-item" href="#">XL</a>
+                    <a class="dropdown-item" href="#">XXL</a>
+                </div>
+            </div>
+
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <!-- <div class="dropdown col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Sort by
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Price Lower-Higher</a>
+                    <a class="dropdown-item" href="#">Price Higher-Lower</a>
+                    <a class="dropdown-item" href="#">Alphabetical (A-Z)</a>
+                </div>
+            </div>
+
+            <div class="btn-group-sm dropdown margin-flter" role="group">
+                <!-- <div class=" col-sm-6 col-md-4 col-lg-2 col-xl-2">-->
+                <button type="button" class="btn btn-outline-danger ">Reset Filters</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Fine Filtri -->
+    <div class="card-container">
+        <div class="card-group">
+
+            <div class="card">
+                <img src="prova.jpg" class="card-img-top" alt=""><!-- inserire description in alt-->
+                <div class="card-body">
+                    <button class="btn btn-link heart"><i class="far fa-heart "></i></button>
+                    <h5 class="card-title">Card title</h5>
+                    <small class="brand-name">Brand name</small>
+                    <div class="prezzo-container">
+                        <p class="card-text prezzo-card">55.00€</p>
+                        <p class="card-text">Select your size</p>
+                    </div>
+
+                    <select class="custom-select size-card">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <div class="disponibilit-container">
+                        <p class="avaibility-card">Available</p>
+                    </div>
+
+                    <div class="add-container">
+                        <button class="btn btn-primary" >Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="prova.jpg" class="card-img-top" alt=""><!-- inserire description in alt-->
+                <div class="card-body">
+                    <button class="btn btn-link heart"><i class="far fa-heart "></i></button>
+                    <h5 class="card-title">Card title</h5>
+                    <small class="brand-name">Brand name</small>
+                    <div class="prezzo-container">
+                        <p class="card-text prezzo-card">55.00€</p>
+                        <p class="card-text">Select your size</p>
+                    </div>
+
+                    <select class="custom-select size-card">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <div class="disponibilit-container">
+                        <p class="avaibility-card">Available</p>
+                    </div>
+
+                    <div class="add-container">
+                        <button class="btn btn-primary" >Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="prova.jpg" class="card-img-top" alt=""><!-- inserire description in alt-->
+                <div class="card-body">
+                    <button class="btn btn-link heart"><i class="far fa-heart "></i></button>
+                    <h5 class="card-title">Card title</h5>
+                    <small class="brand-name">Brand name</small>
+                    <div class="prezzo-container">
+                        <p class="card-text prezzo-card">55.00€</p>
+                        <p class="card-text">Select your size</p>
+                    </div>
+
+                    <select class="custom-select size-card">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <div class="disponibilit-container">
+                        <p class="avaibility-card">Available</p>
+                    </div>
+
+                    <div class="add-container">
+                        <button class="btn btn-primary" >Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footerSup">
+        <div>
+            <i class=" foot-icon fas fa-lock"></i><br>
+        </div>
+        <bold>Secure payment</bold>
+        <p style="font-weight: lighter"> thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
+        <br>
+        <div>
+            <i class="foot-icon fas fa-check"></i><br>
+        </div>
+        <bold>Free shipping</bold>
+        <p style="font-weight: lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
+        <hr>
+
+        <bold>Client Service</bold>
+
+        <p style="font-weight: lighter">  Email:info@mattchy.com</p>
+        <br>
+        <br>
+        <hr>
+        <bold>Social</bold>
+        <br>
+        <br>
+        <div>
+            <a href="#"><i class=" soc-icon fab fa-facebook-f"></i></a>
+            <a href="#"> <i class="soc-icon  fab fa-instagram"></i></a>
+            <a href="#"><i class="soc-icon fab fa-twitter"></i></a>
+            <a href="#"><i class="soc-icon fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="soc-icon fab fa-pinterest-p"></i></a>
+        </div>
+    </div>
+    <div id="footerInf">
+        © 2002-2019 - GRAFFITISHOP® è un marchio registrato di proprietà di Pluss srl, via F.d'Ovidio, 3 Milano
+        <br>Reg. Imp. Cam. Comm. PV 02225020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02225020185
+
+
+    </div>
+
+</footer>
+
+<script src="jquery.js"></script>
+<script src="loginProcess2.js"></script>
+<script src="script38.js"></script>
+<script src="objectProcess121.js"></script>
+
+</body>
+</html>

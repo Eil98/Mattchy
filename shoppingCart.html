@@ -5,25 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#333333">
     <title>Mattchy</title>
-    <link rel="stylesheet"  type="text/css" href="Style1.css">
+    <link rel="stylesheet"  type="text/css" href="StyleComune4.css">
     <link rel="stylesheet" type="text/css" href="StyleShopping12.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link rel="stylesheet " type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-
-
-
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-
-<header class="">
-
-
+<header>
+    <!-- Overlay -->
     <div id="searchOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlay-content">
@@ -37,7 +32,7 @@
     <div id="loginOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlayLog-content">
-            <form action="main2.php" class="login-content" id="login-formGroup">
+            <form action="" class="login-content" id="login-formGroup">
                 <p style="color: white; font-size: 40px">Login</p>
                 <br>
                 <input type="email" class="formOverlay" id="emailLog" placeholder="Username" name="username" required="required">
@@ -53,11 +48,9 @@
     <div id="adressesOverlay" class="overlayAdress">
         <span class="closeBtn" title="Close Overlay">×</span>
             <p class="titleAdress">Select a shipping adress</p>
-
-
         <div class="overlayAdress-content">
 
-            <form action="main2.php" class="overlayAdress-content" id="adresses-formGroup">
+            <form action="" class="overlayAdress-content" id="adresses-formGroup">
                 <input type="button" class="buy btn btn-primary" name="addAdress" id="newadress" value="Add a new adress" style="border-radius: unset">
                 <br>
                 <div class="inputGroup">
@@ -86,8 +79,6 @@
                     <label for="adresses7"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
                 </div>
                 <input type="button" class="buy btn btn-primary" name="thisAdress"  id="" value="Ship to this adress" style="border-radius: unset">
-
-
             </form>
         </div>
     </div>
@@ -96,11 +87,8 @@
     <div id="overlayCards" class="overlayAdress">
         <span class="closeBtn" title="Close Overlay">×</span>
         <p class="titleAdress">Select a payment method</p>
-
-
         <div class="overlayAdress-content">
-
-            <form action="main2.php" class="overlayAdress-content" >
+            <form action="" class="overlayAdress-content" >
                 <input type="button" class="buy btn btn-primary" name="addCard" id="newcard" value="Add a payment method" style="border-radius: unset">
                 <br>
                 <div class="inputGroup">
@@ -129,151 +117,58 @@
                     <label for="card2"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
                 </div>
                 <input type="button" class="buy btn btn-primary" name="thisCard"  value="Use tis payment method" style="border-radius: unset">
-
-
             </form>
         </div>
     </div>
 
+    <!--Fine Overlay -->
 
 
 
-    <div id="navbar" class="">
-
-
+    <div id="navbar">
         <div id="wrapIcon">
-
             <div id="hamb">
                 <i class="fa fa-bars"></i>
             </div>
             <div id="logoMob">
-                <a href="#"><img src="LogoMattchy2.png" width="70"></a>
+                <a href="#" ><img  class="gotoHome" src="LogoMattchy2.png" width="70"></a>
             </div>
-
             <div class="searchwrap">
                 <button class="openBtn"><i class="fa fa-search "></i></button>
             </div>
-
-
         </div>
-
-
-        <ul>
-
-            <li id="logoDex"><a href="#"><img src="LogoMattchy2.png" width="58"></a></li>
-            <li class="subMenu"><a href="#"><i class="fas fa-tshirt"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
-                <ul>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">jQuery</p></a></li>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Vanilla JavaScript</p></a></li>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">ReactJS</p></a></li>
-                    <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">VueJS</p></a></li>
+        <ul class="menuUL">
+            <li id="logoDex" class="menuUL-LI"><a href="#"  class="menuUL-LI-A "><img class="gotoHome" src="LogoMattchy2.png" width="58"></a></li>
+            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
+                <ul class="menuUL-UL">
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Hoodies & Sweatshirts</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">T-Shirts & Shirt</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Pants</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shorts</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shoes</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Accessories</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Jackets & Coats</p></a></li>
+                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Underwear & Swimwear</p></a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fas fa-envelope"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Contact</p></a></li>
-            <li id="shopCart"><a href="#" id="shopCartTrigg"><i class="fa fa-shopping-cart"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
+            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
+            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
 
-            <li class="subMenu" id="submenu-user">
+            <li class="subMenu menuUL-LI" id="submenu-user">
                 <div id="normalmenu">
-                    <a href="#" class="openBtnLog"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
                 </div>
                 <div  id="usermenu">
-                    <a href="#" ><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc"></i></a>
-                    <ul>
-                        <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
-                        <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My Adresses</p></a></li>
-                        <li><a href="#"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
-                        <li><a href="#" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
+                    <ul class="menuUL-UL">
+                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="wishlist"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="myorders"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
+                        <li class="menuUL-UL-Li"><a href="#" class="menuUL-LI-A" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
                     </ul>
                 </div>
             </li>
-
-
         </ul>
-
     </div>
-
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <div class="container-fluid">
-                        <div clas="row">
-                            <div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
-                                <h4 class="modal-title" id="exampleModalLabel">Login</h4>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 pull-right">
-                                <button type="button " class="chiudi" style="alignment: right" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <form action="controllalogin.php" method="post">
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div clas="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                    <form action="controllalogin.php" method="post">
-                                        <label>Nome utente:</label>
-                                </div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-                                    <input type="text" required style="width:90%;" class=" form-control" name="nome_ut" >
-                                </div>
-                            </div>
-
-                            <div clas="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                    <label>Password:</label>
-                                </div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-                                    <input type="password" required style="width:90%;"  class="max-width form-control" name="password">
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <input button type="button" class="button2" data-dismiss="modal" value="Chiudi">
-                        <input button type="submit" name="invia" value="Accedi" class="button">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
 
 </header>
 <br>
@@ -463,7 +358,7 @@
 
 <script src="jquery.js"></script>
 <script src="loginProcess2.js"></script>
-<script src="script1.js"></script>
+<script src="script38.js"></script>
 <script src="checkoutProcess12.js"></script>
 
 </body>
