@@ -22,7 +22,7 @@
     <div id="searchOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlay-content">
-            <form action="/action_page.php">
+            <form action="">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit" id="logSubmit"><i class="fa fa-search"></i></button>
             </form>
@@ -47,38 +47,16 @@
 
     <div id="adressesOverlay" class="overlayAdress">
         <span class="closeBtn" title="Close Overlay">×</span>
-            <p class="titleAdress">Select a shipping adress</p>
+        <p class="titleAdress">Select a shipping adress</p>
         <div class="overlayAdress-content">
-
-            <form action="" class="overlayAdress-content" id="adresses-formGroup">
+            <form action="" class="overlayAdress-content" >
                 <input type="button" class="buy btn btn-primary" name="addAdress" id="newadress" value="Add a new adress" style="border-radius: unset">
                 <br>
-                <div class="inputGroup">
-                    <input id="adresses1" name="adresses" type="radio"/>
-                    <label for="adresses1"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="adresses2" name="adresses" type="radio"/>
-                    <label for="adresses2"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="adresses3" name="adresses" type="radio"/>
-                    <label for="adresses3"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="adresses5" name="adresses" type="radio"/>
-                    <label for="adresses5"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="adresses6" name="adresses" type="radio"/>
-                    <label for="adresses6"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
+                <div class="adressesbox-container">
+
                 </div>
 
-                <div class="inputGroup">
-                    <input id="adresses7" name="adresses" type="radio"/>
-                    <label for="adresses7"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <input type="button" class="buy btn btn-primary" name="thisAdress"  id="" value="Ship to this adress" style="border-radius: unset">
+                <input type="submit" class="buy btn btn-primary" name="thisAdress" id="" value="Ship to this adress" style="border-radius: unset">
             </form>
         </div>
     </div>
@@ -87,36 +65,13 @@
     <div id="overlayCards" class="overlayAdress">
         <span class="closeBtn" title="Close Overlay">×</span>
         <p class="titleAdress">Select a payment method</p>
-        <div class="overlayAdress-content">
-            <form action="" class="overlayAdress-content" >
+        <div class="overlayCards-content">
+            <form action="" class="overlayCards-content" >
                 <input type="button" class="buy btn btn-primary" name="addCard" id="newcard" value="Add a payment method" style="border-radius: unset">
                 <br>
-                <div class="inputGroup">
-                    <input id="card1" name="adresses" type="radio"/>
-                    <label for="card1"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
+                <div class="cardsbox-container">
                 </div>
-                <div class="inputGroup">
-                    <input id="card3" name="adresses" type="radio"/>
-                    <label for="card3"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="card4" name="adresses" type="radio"/>
-                    <label for="card4"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="card5" name="adresses" type="radio"/>
-                    <label for="card5"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <div class="inputGroup">
-                    <input id="card6" name="adresses" type="radio"/>
-                    <label for="card6"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-
-                <div class="inputGroup">
-                    <input id="card2" name="adresses" type="radio"/>
-                    <label for="card2"><div>VIA VITTORIO VENETO, 104</div><div>20091 - bresso (MI)</div><div>Italia</div><div>Telefono: 3389772702</div></label>
-                </div>
-                <input type="button" class="buy btn btn-primary" name="thisCard"  value="Use tis payment method" style="border-radius: unset">
+                <input type="submit" class="buy btn btn-primary" name="thisCard"  value="Use this payment method" style="border-radius: unset">
             </form>
         </div>
     </div>
@@ -183,70 +138,40 @@
         </ol>
     </nav>
 
-    <div class="card-group"><!--TODO:usa media-object alignment di bootstrap-->
-        <div class="card " style="max-width: 540px;">
-            <div class="row no-gutters mb-0">
-                    <img src="verticale1.jpg" class="card-img"  style="width: 90px;height: 122px;" alt="..." >
-                    <div class="card-body">
-                        <h6 class="card-title">Maglietta-<small>Nike</small></h6>
-                        <p class="card-text float-right "> €70</p>
-                        <p class="card-text">S </p>
+    <div class="shopcart-container">
 
-
-                        <div class="input-group input-group-sm ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="quantity">Quantity</label>
-                        </div>
-
-                        <select class="custom-select-sm " id="quantity" >
-                                <option value="0">(0)Remove</option>
-                                <option selected value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
-                        </div>
-                    </div>
-
-            </div>
-        </div>
     </div>
 
 
     <form class="form">
     <div class="row">
 
-
-
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
             <fieldset>
-
                 <strong>Shipping Adress</strong>
-                <div class="inputGroup">
-                    <input id="radio1" name="radio" type="radio"/>
-                    <label for="radio1">Yes</label>
+                <div class="inputGroup" >
+                    <input id="selectedSA" name="shippingAd" type="radio"/>
+                    <label id="selectedSALabel" for="selectedSA"></label>
                 </div>
                 <div class="inputGroup">
-                    <input id="radio2" class="openBtnAdresses" name="radio" type="radio"/>
-                    <label for="radio2">Select an other adress</label>
+                    <input id="selectedNewSA" class="openBtnAdresses" name="shippingAd" type="radio"/>
+                    <label for="selectedNewSA">Select an other adress</label>
                 </div>
             </fieldset>
-
-
         </div>
+
+
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
             <fieldset>
-
-            <strong>Payment method</strong>
-
-            <div class="inputGroup">
-                <input id="radio3" name="radio2" type="radio"/>
-                <label for="radio3">Yes</label>
-            </div>
-            <div class="inputGroup">
-                <input id="radio4" class="openBtnCards" name="radio2" type="radio"/>
-                <label for="radio4">Select an other payment method</label>
-            </div>
+                <strong>Payment method</strong>
+                <div class="inputGroup">
+                    <input id="selectedCA" name="cardPay" type="radio"/>
+                    <label id="selectedCALabel" for="selectedCA"></label>
+                </div>
+                <div class="inputGroup">
+                    <input id="selectedNewCA" class="openBtnCards" name="cardPay" type="radio"/>
+                    <label for="selectedNewCA">Select an other card</label>
+                </div>
             </fieldset>
 
 
@@ -258,24 +183,21 @@
 
                     <div class="inputGroup">
                         <input id="radio5" name="radio3" type="radio"/>
-                        <label for="radio5">Yes</label>
+                        <label for="radio5">National Post</label>
                     </div>
                     <div class="inputGroup">
                         <input id="radio6" name="radio3" type="radio"/>
-                        <label for="radio6">No</label>
+                        <label for="radio6">SDA</label>
 
                     </div>
                 </fieldset>
             </div>
-
-
-
     </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
                 <strong>Discount code</strong>
                 <div class="inputGroup2">
-                    <input type="text" name="scontoCod" id="Codsconto" value="insert code" >
+                    <input type="text" name="scontoCod" id="Codsconto" placeholder="insert code" >
                 </div>
             </div>
 
@@ -295,26 +217,13 @@
                 <div class="float-right">€70</div>
                 <strong>Total amount</strong>
                 <div class="input-group2">
-                    <input type="button" class="buy btn btn-primary" name="Procedi acquisto" value="Purchase the order" style="border-radius: unset">
+                    <input type="submit" class="buy btn btn-primary" name="Procedi acquisto" value="Purchase the order" style="border-radius: unset">
                 </div>
             </div>
         </div>
 
     </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer>
     <div id="footerSup">
         <div>
@@ -357,7 +266,6 @@
 </footer>
 
 <script src="jquery.js"></script>
-<script src="loginProcess.js"></script>
 <script src="scriptComune.js"></script>
 <script src="checkoutProcess.js"></script>
 

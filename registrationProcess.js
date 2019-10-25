@@ -43,6 +43,7 @@ const handleFormSubmit = event => {
 
 
     localStorage.setItem(key,dataString);
+    localStorage.setItem("access",key);
     $(location).attr('href','mainFinale.html');
 };
 

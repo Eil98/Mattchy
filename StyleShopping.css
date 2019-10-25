@@ -23,9 +23,6 @@
     height: 60px;
     border: none;
     z-index: 0;
-
-
-
     visibility: visible;!important;
 }
 
@@ -111,7 +108,6 @@
 
 .form {
     padding: 0 16px;
-
     margin: 50px auto;
     font-size: 18px;
     font-weight: 600;
@@ -193,6 +189,23 @@ html {
     width: 80%;
     margin: auto;
 
+}
+.overlayCards-content{
+    position: relative;
+    background-color: #e9ecef;
+    width: 80%;
+    margin: auto;
+
+}
+.card{
+    max-width: 540px!important;
+}
+.card-img{
+    width:134.8px!important;
+}
+.card-body{
+    padding-top:10px!important;
+    padding-bottom:0px!important;
 }
 
 

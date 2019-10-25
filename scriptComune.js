@@ -11,8 +11,6 @@ $(document).ready(function () {
         $(this).find('ul').slideToggle();
     });
 
-
-
     $(window).resize(function() {
         if($(window).width() > 768) {
             $("ul").removeAttr('style');
@@ -25,10 +23,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
 
         var currentScrollPos=$(window).scrollTop();
-        console.log(currentScrollPos + " + " + prevScrollPos);
         if(currentScrollPos>prevScrollPos){
-            //var isDown=currentScrollPos>prevScrollPos;
-            console.log("CooooO");
             $("#navbar").addClass("hidden");
         }else if ( currentScrollPos<prevScrollPos ){
             $("#navbar").removeClass("hidden");
@@ -36,6 +31,7 @@ $(document).ready(function () {
         prevScrollPos=currentScrollPos;
 
     });
+    //Graphic
 
     $(".heart").click(function () {
         console.log("ciaozio");
@@ -47,16 +43,10 @@ $(document).ready(function () {
     $(".card-img-top").click(function () {
         console.log("weee");
     });
-
-
-
     $(".dropdown").click(function() {
         $(this).find('div').slideToggle();
     });
 
-    $(".closeBtn").click(function () {
-        $("#searchOverlay").css("display","none");
-    });
 
     $(".openBtn").click(function () {
 
@@ -75,7 +65,10 @@ $(document).ready(function () {
     });
 
     $("#shopCartTrigg").click(function () {
-        $(location).attr('href','shoppingCart.html');
+        if(localStorage.getItem('access')=="null"){
+            $("#loginOverlay").css("display","block");}
+            else{
+            $(location).attr('href','shoppingCart.html');}
     });
 
     $("#brandTrigg").click(function () {
@@ -86,10 +79,36 @@ $(document).ready(function () {
         $(location).attr('href','mainFinale.html');
     });
 
+    //login
+    if(localStorage.getItem("access")!='null'){
+        $('#normalmenu').css('display','none');
+        $('#usermenu').css('display','block');
+    }
+    $("#login-formGroup").submit(function () {
+        event.preventDefault();
+        var user=localStorage.getItem($('#emailLog').val());
+        console.log($('#emailLog').val());
+        var tmp=JSON.parse(user);
+        console.log(tmp);
+        var pw=tmp.password;
+        console.log($('#pwLog').val().toString());
+        console.log(pw);
+        if(pw==$('#pwLog').val().toString()){
+            localStorage.setItem('access',$('#emailLog').val());
+            console.log(localStorage.getItem('access'));
+            $('#normalmenu').css('display','none');
+            $('#usermenu').css('display','block');
+            $("#loginOverlay").css("display","none");
 
+        }else {
+            alert("Incorrect password or email");
+            localStorage.setItem('access','null');
+        }
 
-
-
-
-
+    });
+    $('#logOut').click(function () {
+        localStorage.setItem('access','null');
+        $('#normalmenu').css('display','block');
+        $('#usermenu').css('display','none');
+    })
 });
