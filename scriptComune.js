@@ -33,16 +33,7 @@ $(document).ready(function () {
     });
     //Graphic
 
-    $(".heart").click(function () {
-        console.log("ciaozio");
-        $(this).children().toggleClass("far fa-heart");
 
-        $(this).children().toggleClass("fas fa-heart");
-    });
-
-    $(".card-img-top").click(function () {
-        console.log("weee");
-    });
     $(".dropdown").click(function() {
         $(this).find('div').slideToggle();
     });
@@ -55,7 +46,7 @@ $(document).ready(function () {
     });
     $(".closeBtn").click(function () {
         $("#loginOverlay").css("display","none");
-
+        $("#searchOverlay").css("display","none");
     });
 
     $(".openBtnLog").click(function () {
@@ -87,28 +78,109 @@ $(document).ready(function () {
     $("#login-formGroup").submit(function () {
         event.preventDefault();
         var user=localStorage.getItem($('#emailLog').val());
-        console.log($('#emailLog').val());
-        var tmp=JSON.parse(user);
-        console.log(tmp);
-        var pw=tmp.password;
-        console.log($('#pwLog').val().toString());
-        console.log(pw);
-        if(pw==$('#pwLog').val().toString()){
-            localStorage.setItem('access',$('#emailLog').val());
-            console.log(localStorage.getItem('access'));
-            $('#normalmenu').css('display','none');
-            $('#usermenu').css('display','block');
-            $("#loginOverlay").css("display","none");
+
+        if(user!=undefined && user.email!==$('#emailLog').val().toString()) {
+            console.log($('#emailLog').val());
+            var tmp = JSON.parse(user);
+            console.log(tmp);
+            var pw = tmp.password;
+            console.log($('#pwLog').val().toString());
+            console.log(pw);
+            if (pw == $('#pwLog').val().toString()) {
+                localStorage.setItem('access', $('#emailLog').val());
+                console.log(localStorage.getItem('access'));
+                $('#normalmenu').css('display', 'none');
+                $('#usermenu').css('display', 'block');
+                $("#loginOverlay").css("display", "none");
+                blurt({
+                    title: 'Success',
+
+
+                    text: 'Logged in!',
+
+                    /*
+                   * alert type
+                   * success, error, warning, info
+                   * default is 'default'
+                   */
+                    type: 'success',
+
+                    okButtonText: 'Ok',
+
+                    escapable: true
+                });
+            } else {
+                blurt({
+                    title: 'Error',
+
+
+                    text: 'Incorrect password',
+
+                    /*
+                   * alert type
+                   * success, error, warning, info
+                   * default is 'default'
+                   */
+                    type: 'error',
+
+                    okButtonText: 'Ok',
+
+                    escapable: true
+                });
+                localStorage.setItem('access', 'null');
+            }
 
         }else {
-            alert("Incorrect password or email");
-            localStorage.setItem('access','null');
-        }
+            blurt({
+                title: 'Error',
 
+
+                text: 'Incorrect email',
+
+                /*
+               * alert type
+               * success, error, warning, info
+               * default is 'default'
+               */
+                type: 'error',
+
+                okButtonText: 'Ok',
+
+                escapable: true
+            });
+        }
     });
     $('#logOut').click(function () {
         localStorage.setItem('access','null');
         $('#normalmenu').css('display','block');
         $('#usermenu').css('display','none');
-    })
+    });
+
+    var l = location.href;
+    l=l.substr(l.lastIndexOf("/")+1).split(/[?#]/)[0];
+    if(l!= "mainFinale.html")
+    {
+        $("#searchObj").on("click",function () {
+            $(location).attr('href','mainFinale.html');
+            blurt({
+                title: 'Info',
+
+
+                text: 'You can search items here!',
+
+                /*
+               * alert type
+               * success, error, warning, info
+               * default is 'default'
+               */
+                type: 'info',
+
+                okButtonText: 'Ok',
+
+                escapable: true
+            });
+        });
+    }
+
+
 });

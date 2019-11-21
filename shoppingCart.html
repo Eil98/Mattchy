@@ -6,7 +6,9 @@
     <meta name="theme-color" content="#333333">
     <title>Mattchy</title>
     <link rel="stylesheet"  type="text/css" href="StyleComune.css">
-    <link rel="stylesheet" type="text/css" href="StyleShopping.css">
+    <link rel="stylesheet" type="text/css" href="styleShopping.css">
+    <link rel="stylesheet" type="text/css" href="alerts/blurt.min.css">
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -89,40 +91,30 @@
                 <a href="#" ><img  class="gotoHome" src="LogoMattchy2.png" width="70"></a>
             </div>
             <div class="searchwrap">
-                <button class="openBtn"><i class="fa fa-search "></i></button>
+                <button class="openBtn" id="searchObj"><i class="fa fa-search "></i></button>
             </div>
         </div>
+
         <ul class="menuUL">
             <li id="logoDex" class="menuUL-LI"><a href="#"  class="menuUL-LI-A "><img class="gotoHome" src="LogoMattchy2.png" width="58"></a></li>
-            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
-                <ul class="menuUL-UL">
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Hoodies & Sweatshirts</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">T-Shirts & Shirt</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Pants</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shorts</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shoes</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Accessories</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Jackets & Coats</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Underwear & Swimwear</p></a></li>
-                </ul>
-            </li>
-            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
-            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
+
+            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menuUL-LI-I"></i> <p class="menuPSC">Brands</p></a></li>
+            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menuUL-LI-I"></i> <p class="menuPSC">Shopping-Cart</p></a></li>
 
             <li class="subMenu menuUL-LI" id="submenu-user">
                 <div id="normalmenu">
-                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p class="menuPSC">Sign Up/Log in</p></a>
                 </div>
                 <div  id="usermenu">
-                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
+                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p class="menuPSC">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
                     <ul class="menuUL-UL">
-                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="wishlist"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
-                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="myorders"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
-                        <li class="menuUL-UL-Li"><a href="#" class="menuUL-LI-A" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="order.html" class="menuUL-LI-A" id="myorders"><p class="menuP">My orders</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="" class="menuUL-LI-A" id="logOut"><p class="menuP">Logout</p></a></li>
                     </ul>
                 </div>
             </li>
         </ul>
+
     </div>
 
 </header>
@@ -133,8 +125,9 @@
 <div class="container-fluid">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Library</li>
+            <li class="breadcrumb-item "><a href="mainFinale.html" >Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shopping-Cart</li>
+
         </ol>
     </nav>
 
@@ -143,18 +136,18 @@
     </div>
 
 
-    <form class="form">
+    <form class="form shop-form">
     <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
             <fieldset>
                 <strong>Shipping Adress</strong>
                 <div class="inputGroup" >
-                    <input id="selectedSA" name="shippingAd" type="radio"/>
+                    <input id="selectedSA" name="shippingAd" type="radio" required/>
                     <label id="selectedSALabel" for="selectedSA"></label>
                 </div>
                 <div class="inputGroup">
-                    <input id="selectedNewSA" class="openBtnAdresses" name="shippingAd" type="radio"/>
+                    <input id="selectedNewSA" class="openBtnAdresses" name="shippingAd" type="radio" required/>
                     <label for="selectedNewSA">Select an other adress</label>
                 </div>
             </fieldset>
@@ -165,11 +158,11 @@
             <fieldset>
                 <strong>Payment method</strong>
                 <div class="inputGroup">
-                    <input id="selectedCA" name="cardPay" type="radio"/>
+                    <input id="selectedCA" name="cardPay" type="radio" required/>
                     <label id="selectedCALabel" for="selectedCA"></label>
                 </div>
                 <div class="inputGroup">
-                    <input id="selectedNewCA" class="openBtnCards" name="cardPay" type="radio"/>
+                    <input id="selectedNewCA" class="openBtnCards" name="cardPay" type="radio" required/>
                     <label for="selectedNewCA">Select an other card</label>
                 </div>
             </fieldset>
@@ -179,17 +172,20 @@
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
                 <fieldset>
 
-                    <strong>Shipping Holder</strong>
+                    <strong>Shipping Holder(free SDA for 50€ minimum order)</strong>
 
                     <div class="inputGroup">
-                        <input id="radio5" name="radio3" type="radio"/>
-                        <label for="radio5">National Post</label>
+                        <input id="radio5" name="radio3" value="0" type="radio" class="shipcntrl" required/>
+                        <label for="radio5">National Post(free)</label>
                     </div>
                     <div class="inputGroup">
-                        <input id="radio6" name="radio3" type="radio"/>
+                        <input id="radio6" name="radio3" value="1" type="radio" class="shipcntrl" required/>
                         <label for="radio6">SDA</label>
 
                     </div>
+                    <span id='message'></span>
+                    <span id='message2'></span>
+
                 </fieldset>
             </div>
     </div>
@@ -198,50 +194,52 @@
                 <strong>Discount code</strong>
                 <div class="inputGroup2">
                     <input type="text" name="scontoCod" id="Codsconto" placeholder="insert code" >
+
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
                 <div class="input-group2">
-                    <input type="button" class="buy btn btn-outline-dark" name="info" value="Some doubts?Call 337489204398" style="border-radius: unset">
+                    <input type="button" class="buy btn btn-outline-dark buttonUnset" name="info" value="Some doubts?Call 337489204398">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 backForm">
                 <strong>Summary</strong><br>
-                <div class="float-right">€70</div>
+                <div class="float-right totProduct"></div>
                 Total products<br>
-                <div class="float-right">Free</div>
+                <div class="float-right shippingFees"></div>
                 Shipping fees
                 <hr class="lineSum">
-                <div class="float-right">€70</div>
+                <div class="float-right tot"></div>
                 <strong>Total amount</strong>
                 <div class="input-group2">
-                    <input type="submit" class="buy btn btn-primary" name="Procedi acquisto" value="Purchase the order" style="border-radius: unset">
+                    <input type="submit" class="buy btn btn-primary buttonUnset" name="Proceed to checkout" value="Proceed to checkout" >
                 </div>
             </div>
         </div>
 
     </form>
     </div>
+
 <footer>
     <div id="footerSup">
         <div>
             <i class=" foot-icon fas fa-lock"></i><br>
         </div>
         <bold>Secure payment</bold>
-        <p style="font-weight: lighter"> thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
+        <p class="lighter"> Thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
         <br>
         <div>
             <i class="foot-icon fas fa-check"></i><br>
         </div>
         <bold>Free shipping</bold>
-        <p style="font-weight: lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
+        <p class="lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
         <hr>
 
         <bold>Client Service</bold>
 
-        <p style="font-weight: lighter">  Email:info@mattchy.com</p>
+        <p class="lighter">  Email:info@mattchy.com</p>
         <br>
         <br>
         <hr>
@@ -257,10 +255,8 @@
         </div>
     </div>
     <div id="footerInf">
-        © 2002-2019 - GRAFFITISHOP® è un marchio registrato di proprietà di Pluss srl, via F.d'Ovidio, 3 Milano
-        <br>Reg. Imp. Cam. Comm. PV 02225020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02225020185
-
-
+        © 2002-2019 - MATTCHY® è un marchio registrato di proprietà di Maze srl, via F.Corridoni, 3 Milano
+        <br>Reg. Imp. Cam. Comm. PV 02223020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02223020185
     </div>
 
 </footer>
@@ -268,6 +264,7 @@
 <script src="jquery.js"></script>
 <script src="scriptComune.js"></script>
 <script src="checkoutProcess.js"></script>
+<script src="alerts/blurt.min.js"></script>
 
 </body>
 </html>

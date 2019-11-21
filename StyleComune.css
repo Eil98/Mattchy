@@ -1,9 +1,3 @@
-html{
-    font-weight: 400;
-    font-family: SansSerif;
-}
-
-
 header{
     font-size: 13px;
 }
@@ -11,14 +5,13 @@ header{
 body {
     margin: 0;
 
+
 }
 h1 { margin: 150px auto; text-align: center; }
 
 
 /*Navbar*/
 #navbar{
-
-
     width: 100%;
     top:0;
     position: fixed;
@@ -75,13 +68,13 @@ h1 { margin: 150px auto; text-align: center; }
 .menuUL-LI-A {
     color:#ffffff;
     cursor: pointer;
-    text-decoration: none;
-    text-outline: none;
+    text-decoration: none!important;
+    text-outline: none!important;
     padding: 15px;
     display: block;
 }
 .menuUL-LI-I {
-    color: #ffffff;
+    color: #ffffff!important;
     padding-left: 20px;
 }
 .menuUL-UL {
@@ -94,8 +87,6 @@ h1 { margin: 150px auto; text-align: center; }
 .menuUL-UL-LI {
     display: block;
 }
-
-
 
 .menuUL-LI:hover {
     background: #0069d9;
@@ -145,6 +136,22 @@ h1 { margin: 150px auto; text-align: center; }
 
 
 }
+.menuP{
+    color:#ffffff!important;
+    margin-bottom: 0px!important;
+}
+.menuPSC{
+    display: inline-block!important;
+    color:#ffffff!important;
+    margin-bottom: 0px!important;
+    font-size: 13px!important;
+}
+.loginP{
+    color: white!important;
+    font-size: 40px!important;
+}
+
+
 .card-deck .card{
     margin-left: 7.5px!important;
     margin-right: 7.5px!important;
@@ -158,10 +165,6 @@ h1 { margin: 150px auto; text-align: center; }
 #usermenu{
     display: none;
 }
-.subMenu{
-
-}
-
 /* Footer*/
 
 footer {
@@ -239,6 +242,9 @@ footer {
 .fas:hover {
     opacity: 0.7;
 }
+.lighter{
+    font-weight: lighter!important;
+}
 
 hr{
     height: 28px;
@@ -246,13 +252,19 @@ hr{
     border-bottom: 1px solid #ccc;
     color: white;
     background-color: white;
-
     width: 50%;
     margin: auto;
 }
+.orderLine{
+    height: 0.2px!important;
+    width: 100%!important;
+    color: white !important;
+    background-color:  #333333!important;
+    padding-bottom: 0px!important;
+    margin-bottom: 0px!important;
+}
 
 /* Cards*/
-.heart{float: right!important;}
 /* The overlay effect - lays on top of the container and over the image */
 .gender-card{float: right;}
 .prezzo-container{
@@ -278,10 +290,6 @@ hr{
 bold{
     font-weight: 500;
 }
-
-
-
-
 .searchwrap{
     float: right;
     display: inline-block;

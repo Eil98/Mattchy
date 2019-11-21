@@ -16,7 +16,11 @@ $(document).ready(function () {
             localStorage.setItem(localStorage.getItem("access"),JSON.stringify(usertmp));
             $(location).attr('href','shoppingCart.html');
         }else {
-            const scLength=usertmp.cards.length;
+            const scLength=usertmp.cards.length;;
+            for(var i=0;i<scLength;i++) {
+                usertmp.cards[i].selected="0";
+            }
+
             console.log(scLength);
             usertmp.cards[scLength]={
                     first_name:""+ formOut[0].value+"",

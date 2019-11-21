@@ -1,6 +1,14 @@
+body{
+    background-color: #333333!important;
+}
+
 html{
     font-weight: 400;
     font-family: SansSerif;
+}
+
+.signup-form h2:before, .signup-form h2:after{
+    width: 3%;!important;
 }
 .form-control{
     height: 40px;
@@ -21,15 +29,35 @@ html{
     position: relative;
     text-align: center;
 }
-.signup-form h2:before, .signup-form h2:after{
+.signup-form .shipTitle:before, .signup-form .shipTitle:after{
+     content: "";
+     height: 2px;
+     width: 6%;
+     background: #d4d4d4;
+     position: absolute;
+     top: 50%;
+     z-index: 2;
+ }
+.signup-form .cardsTitle:before, .signup-form .cardsTitle:after{
     content: "";
     height: 2px;
-    width: 30%;
+    width: 2%;
     background: #d4d4d4;
     position: absolute;
     top: 50%;
     z-index: 2;
 }
+
+.signup-form .regTitle:before, .signup-form .regTitle:after{
+    content: "";
+    height: 2px;
+    width: 24%;
+    background: #d4d4d4;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
 .signup-form h2:before{
     left: 0;
 }

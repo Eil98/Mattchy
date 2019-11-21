@@ -55,40 +55,30 @@
                 <a href="#" ><img  class="gotoHome" src="LogoMattchy2.png" width="70"></a>
             </div>
             <div class="searchwrap">
-                <button class="openBtn"><i class="fa fa-search "></i></button>
+                <button class="openBtn" id="searchObj"><i class="fa fa-search "></i></button>
             </div>
         </div>
+
         <ul class="menuUL">
             <li id="logoDex" class="menuUL-LI"><a href="#"  class="menuUL-LI-A "><img class="gotoHome" src="LogoMattchy2.png" width="58"></a></li>
-            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
-                <ul class="menuUL-UL">
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Hoodies & Sweatshirts</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">T-Shirts & Shirt</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Pants</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shorts</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shoes</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Accessories</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Jackets & Coats</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Underwear & Swimwear</p></a></li>
-                </ul>
-            </li>
-            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
-            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
+
+            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menuUL-LI-I"></i> <p class="menuPSC">Brands</p></a></li>
+            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menuUL-LI-I"></i> <p class="menuPSC">Shopping-Cart</p></a></li>
 
             <li class="subMenu menuUL-LI" id="submenu-user">
                 <div id="normalmenu">
-                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p class="menuPSC">Sign Up/Log in</p></a>
                 </div>
                 <div  id="usermenu">
-                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
+                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p class="menuPSC">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
                     <ul class="menuUL-UL">
-                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="wishlist"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
-                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="myorders"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
-                        <li class="menuUL-UL-Li"><a href="#" class="menuUL-LI-A" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="order.html" class="menuUL-LI-A" id="myorders"><p class="menuP">My orders</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="" class="menuUL-LI-A" id="logOut"><p class="menuP">Logout</p></a></li>
                     </ul>
                 </div>
             </li>
         </ul>
+
     </div>
 </header>
 <br>
@@ -96,47 +86,48 @@
 <br>
 
 <div class="container-fluid">
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Library</li>
+            <li class="breadcrumb-item"><a href="mainFinale.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Brand</li>
         </ol>
     </nav>
 
-    <h4 class="brandtitle">All Brands</h4><br>
+    <h4 class="brandtitle">Our Brands</h4><br>
     <div class="row" >
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
             <ul class="brandList">
                 <li class="brandItem">
                     <span class="firtLetter">A</span><br>
-                    <a href="" class="brandLink">Adidas Originals</a><br>
-                    <a href="" class="brandLink">Asics</a><br>
-                    <a href="" class="brandLink">Australian</a>
+                    <a href="#adidas" class="brandLink">Adidas Originals</a><br>
+                    <a href="#asics" class="brandLink">Asics</a><br>
+                    <a href="#australian" class="brandLink">Australian</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">B</span><br>
-                    <a href="" class="brandLink">Butter Goods</a>
+                    <a href="#butter" class="brandLink">Butter Goods</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">C</span><br>
-                    <a href="" class="brandLink">Carhartt</a>
+                    <a href="#carhartt" class="brandLink">Carhartt</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">D</span><br>
-                    <a href="" class="brandLink">Dickies</a>
+                    <a href="#dickies" class="brandLink">Dickies</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">F</span><br>
-                    <a href="" class="brandLink">Fila</a>
+                    <a href="#fila" class="brandLink">Fila</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">I</span><br>
-                    <a href="" class="brandLink">Iuter</a>
+                    <a href="#iuter" class="brandLink">Iuter</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">L</span><br>
-                    <a href="" class="brandLink">Levi's</a>
+                    <a href="#levi" class="brandLink">Levi's</a>
                 </li>
 
 
@@ -148,170 +139,204 @@
             <ul class="brandList">
                 <li class="brandItem">
                     <span class="firtLetter">M</span><br>
-                    <a href="" class="brandLink">Mitchell & Ness</a>
+                    <a href="#mitch" class="brandLink">Mitchell & Ness</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">N</span><br>
-                    <a href="" class="brandLink">New Era</a><br>
-                    <a href="" class="brandLink">Nike</a><br>
-                    <a href="" class="brandLink">Nixon</a>
+                    <a href="#new" class="brandLink">New Era</a><br>
+                    <a href="#nike" class="brandLink">Nike</a><br>
+                    <a href="#nixon" class="brandLink">Nixon</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">O</span><br>
-                    <a href="" class="brandLink">Obey</a>
+                    <a href="#obey" class="brandLink">Obey</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">P</span><br>
-                    <a href="" class="brandLink">Patagonia</a>
+                    <a href="#patagonia" class="brandLink">Patagonia</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">R</span><br>
-                    <a href="" class="brandLink">Reebook</a>
+                    <a href="#reebook" class="brandLink">Reebook</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">S</span><br>
-                    <a href="" class="brandLink">Stussy</a>
+                    <a href="#stussy" class="brandLink">Stussy</a>
                 </li>
                 <li class="brandItem">
                     <span class="firtLetter">T</span><br>
-                    <a href="" class="brandLink">The North Face</a>
+                    <a href="#the" class="brandLink">The North Face</a>
                 </li>
             </ul>
         </div>
     </div>
-<h1>Adidas Originals</h1><br>
+    <h1 id="adidas">Adidas Originals</h1><br>
     <div class="wrapperImage">
-        <img class="brandLogo" src="adidas-originals.png">
+        <img class="brandLogo" src="imgBrand/adidas-originals.png">
     </div>
     <p>Every epic story has a great start and the Dassler one begins in Germany: first Adidas trainers ever go back to
         1924 and were key players in assuring Jesse Owens his three iconic gold medals at the Berlin Olympic Games in 1936,
         leading to the patent of the instant-classic Three Stripes logo.</p><br>
-    <h6>Review this brand</h6>
-    <fieldset class="rating">
-        <input type="radio"  class="rate" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-        <input type="radio"  class="rate" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-        <input type="radio"  class="rate" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-        <input type="radio"  class="rate" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-        <input type="radio"  class="rate" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-    </fieldset>
-    <br><br>
-
-    <div class="reviewContainer">
-        <span class="heading">User Rating</span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <p>4.1 average based on 254 reviews.</p>
-        <hr style="border:2px solid #e9ecef">
-
-        <div class="row">
-            <div class="side">
-                <div>5 star</div>
-            </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-5"></div>
-                </div>
-            </div>
-            <div class="side right">
-                <div>150</div>
-            </div>
-            <div class="side">
-                <div>4 star</div>
-            </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-4"></div>
-                </div>
-            </div>
-            <div class="side right">
-                <div>63</div>
-            </div>
-            <div class="side">
-                <div>3 star</div>
-            </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-3"></div>
-                </div>
-            </div>
-            <div class="side right">
-                <div>15</div>
-            </div>
-            <div class="side">
-                <div>2 star</div>
-            </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-2"></div>
-                </div>
-            </div>
-            <div class="side right">
-                <div>6</div>
-            </div>
-            <div class="side">
-                <div>1 star</div>
-            </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-1"></div>
-                </div>
-            </div>
-            <div class="side right">
-                <div>20</div>
-            </div>
-        </div>
-
-
-
-    </div>
-    <hr style="border:1px solid #333333;width: 100%">
-    <h1>Asics</h1><br>
+    <strong>PIVA:</strong>IT 11359593302  <strong>Telephone</strong>:0292.22.40.007
+    <hr class="lineDiv">
+    <h1 id="asics">Asics</h1><br>
     <div class="wrapperImage">
-        <img class="brandLogo" src="asics.png">
+        <img class="brandLogo" src="imgBrand/asics.png">
     </div>
     <p>Left unemployed after returning from the II World War, in 1949 Kihaciro Onitsuka established a company selling boots for students that relies on the favorite motto of his old comrade: "Anima Sana In Corpore Sano" didn't only become the push to
         Kihaciro intentions of building a product able to improve the quality of kids life, but also the acronym of a pivotal brand bound to write pages and pages of lifestyle sneakers history. </p><br>
-    <h6>Send a review about this brand</h6>
-    <fieldset class="rating">
-        <input type="radio"  class="rate" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-        <input type="radio"  class="rate" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-        <input type="radio"  class="rate" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-        <input type="radio"  class="rate" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-        <input type="radio"  class="rate" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-    </fieldset>
-    <br><br>
+    <strong>PIVA:</strong>IT 11359591002  <strong>Telephone:</strong>0292.63.40.007
+    </div>
+    <hr class="lineDiv">
+
+
+
+<h1 id="australian">Australian</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/australian.png">
 </div>
+<p>Born Alpina Maglierie Sportive, Australian shows up on the market in 1946 with a skiing clothing line. In 1956 the company starts being referred to as Australian as it dips into tennis clothing: starring top of the line textures, its high-quality production delves into Italian long-standing care for details and fabrics. Australian catalog could be split in two: on one side the Hardcourt line stands as a well-balanced range of sport-underground items inspired to the '90s, on the other the Sportswear collection reworks signature styles mixing significant graphics elements with modern influences. Bearing all, the Italian brand endorsed Ivan Lendl and Goran Ivanisevic taking taped pants, color-blocking prints and Australian logo branding on the courts from all over the world.</p><br>
+<strong>PIVA:</strong>IT 11359591202  <strong>Telephone:</strong>0292.22.40.047
+<hr class="lineDiv">
+
+<h1 id="butter">Butter Goods</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/butter-goods.png">
+</div>
+<p>Established in 2008, Butter Goods is a skatewear label run by two ex pro-skaters as Gareth Mariano and Matte Evans. Located in the heart of Perth, Butter Goods can boast a distinct attire that reflects the typical Australian melting-pot of cultures and influences. Music, art and pop references blend in with a peculiar typography on comfy sweatshirts and T-shirts, while high-quality textures are undeniable to highlight distinguishing prints as those of Butter Goods.</p><br>
+<strong>PIVA:</strong>IT 11311591002  <strong>Telephone:</strong>0292.21.40.007
+<hr class="lineDiv">
+
+<h1 id="carhartt">Carhartt</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/carhartt.png">
+</div>
+<p>In 1889 Hamilton Carhartt founded its own company of workwear in Detroit, the heart of American industrial revolution: this was the very first strep of Carhartt brand as we know it today, a sheer benchmark of modern workwear and a street culture staple. Following the "Honest value for an honest dollar" motto, it started producing a wide range of garments to meet railway men's needs: endurance, efficiency and durability were the key words for the very first Carhartt jackets, useful gears for the heavy lifting that were universally appreciated for a large variety of details, like the four-pocket Chore Coat - a timeless classic since 1923.</p><br>
+<strong>PIVA:</strong>IT 11311331002  <strong>Telephone:</strong>0292.21.40.137
+<hr class="lineDiv">
+
+<h1 id="dickies">Dickies</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/dickies.png">
+</div>
+<p>Dickies belongs to the restricted list of premium workwear distributors in the world, the zeitgeist of work uniforms that's deeply rooted in post-war American steel mills. Founded in 1922 by C.N. Williamson and E. Dickie, Dickies began manufacturing vehicle and harness and turned into a workwear company just after the II World War: their gears became widespread due to peerless durability and endurance, pushing the American brand into that exclusive group of workwear labels influencing the street culture.</p><br>
+<strong>PIVA:</strong>IT 12511331002  <strong>Telephone:</strong>0292.45.40.137
+<hr class="lineDiv">
+
+<h1 id="fila">Fila</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/fila.png">
+</div>
+<p>Fila was founded in 1911 in Biella, an exquisite small town located in the foothills of northern Italy: four brothers started the business approaching the knitwear world in order to provide local townspeople with high-quality textiles for everyday life - over a century later we could easily admit Fila has become an absolute benchmark in sportswear history. Sport has been quickly becoming the main form of expression in the '70s and this Italian brand has been able to exploit its unmatched vision and managerial creativity to become a worldwide renowned tennis sportswear colossus: the company's philosophy stands out clear in the creative director idea of giving birth to products able to complement and not overpower the athletes. </p><br>
+<strong>PIVA:</strong>IT 12511341002  <strong>Telephone:</strong>0292.33.40.137
+<hr class="lineDiv">
+
+<h1 id="iuter">Iuter</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/iuter.png">
+</div>
+<p>Iuter is an Italian streetwear brand founded in Milan in 2002 by a group of guys born through music, graffiti and snowboard. First times were characterized by a strong influence of the the Italian snowboarding scene, but over the years the brand evolved becoming a sheer benchmark of European streetwear: young Milan-based fellas built a consistent reality which is consistently on the rise, nothing a but a group of passionate friends working to combine their personal background with influences from different areas, creating something unmistakable.</p><br>
+<strong>PIVA:</strong>IT 12511335602  <strong>Telephone:</strong>0292.36.40.137
+<hr class="lineDiv">
+
+<h1 id="levi">Levi's</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/levi-s.png">
+</div>
+<p>There's only one company that can boasts the firs pair ever of blue jeans: we're in 1873 and Levi Strauss has just crafted the first Levi's 501 Original adding a bunch of rivets to work-pants willing to make them more durable and resistant. This brilliant New Yorker of German origin spent his entire life working on denim cloth along with Jacob Davis, improving their starting model by adding the traditional arcuate stitching and the Levi's signature Red Tab on the back of each pair.</p><br>
+<strong>PIVA:</strong>IT 12512335602  <strong>Telephone:</strong>0292.36.40.677
+<hr class="lineDiv">
+
+<h1 id="mitch">Mitchell & Ness</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/mitchell-e-ness.png">
+</div>
+<p>Mitchell & Ness is a sportswear brand focused on bringing back original hats and uniform from the decades. The company was founded in 1904, when former tennis and wrestling champ, Frank P. Mitchell partners with Scottish golfer Charles M. Ness to form a sporting goods store on Arch Street in Philadelphia, PA. Mitchell & Ness Sporting Goods was specialized in handcrafted tennis racquets, golf clubs, and other equipment, but its team jerseys - premium replicas of the originals - quickly became popular among sports' greatest enthusiast: the true fan. Over the years Mitchell & Ness started to grow by manufacturing also basket , hockey and football uniforms of some of the greatest sport champions in the USA history, including Michael Jordan.</p><br>
+<strong>PIVA:</strong>IT 12512377602   <strong>Telephone:</strong>0292.36.40.277
+<hr class="lineDiv">
+
+<h1 id="new">New Era</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/new-era.png">
+</div>
+<p>In 1920 Ehrhardt Koch opted to chase his own American dream founding New Era, a casual caps & hats company. As the label manufactured the first baseball caps ever for the Cleveland Indians, 1934 was the pivotal year to enter the sports market: many MLB teams commissioned the entire hats production to this New York society, that in 1933 obtained even the privilege to fabricate and distribute the merchandising of the entire league, including future collections dedicated to NFL, NBA and NHL teams. The New Era sportswear leadership has been confirmed by a series of new game-changing innovations that have reshaped the idea of snapback itself: in 1954, for instance, the 59fifty cap debuted, becoming the very first peaked cap with a large-scale distribution, while the 39thirty is now generally known as the first cap equipped with an elastic strap on the back.</p><br>
+<strong>PIVA:</strong>IT 12342377602  <strong>Telephone:</strong>0292.36.40.278
+<hr class="lineDiv">
+
+<h1 id="nike">Nike</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/nike.png">
+</div>
+<p>Phil Knight and Bill Bowerman would never think that the freezing 1964 winter would be the first step of the greatest sportswear brand ever. It all starts with the Blue Ribbon Sport, that was a company in charge of importing and selling a massive selection of celebrated Japanese running sneakers: years and years spent producing shoes for the Olympic Games led to the creation of Nike Inc. in 1971 next to Portland, Oregon. Nike breaks into the market with Cortez gaining an immediate success during the 1972 Olympics: the originals structure consists of a sturdy foam midsole along with a heel lining to decrease stress impact and setting brand-new comfort standards. A series of minimal details (like the legendary Swoosh logo) is taken after the wings of the so-called "Samothrace" Greek goddess of victory and round off that USA-colored model</p><br>
+<strong>PIVA:</strong>IT 12342377607  <strong>Telephone:</strong>0292.16.40.278
+<hr class="lineDiv">
+
+<h1 id="nixon">Nixon</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/nixon.png">
+</div>
+<p>Established along the banks of the Pacific Ocean, Nixon was born to conceive accessories reflecting an authentic way of living life, focusing on your passions while staying in tune with nature. The goal is to create original, recognizable items able to ease everyone's lifestyles: from designs to materials, the choice of each element is strictly linked to shape an item that could respond to each customer needs, adjusting its functions to different situations. After building a solid background in extreme sports by jumping from tricks in Venice Beach to surf sessions in Long Beach, Nixon exploited all its experience to figure out watches, backpacks and a massive assortment of accessories to pimp your look: Time Teller is its flagship model, an analogue watch supplied with a water-resistant stainless steel case that you could pair with different wristbands, matching it to the outfit of the day </p><br>
+<strong>PIVA:</strong>IT 12344377607  <strong>Telephone:</strong>0292.76.40.278
+<hr class="lineDiv">
+
+<h1 id="obey">Obey</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/obey.png">
+</div>
+<p>Obey was born from the beautiful mind of Shepard Fairey, a young art student who created a graphic inspired to the wrestler Andre the Giant in 1989: he had no particular purposes other than experimenting new concepts and spread his artistic ideas, but this sticker quickly became an incredible media sensation, leading to the foundation of Obey Giant in 2001 - nothing better than a skate brand driven by a team of passionate enterprising guys. Every collection clearly shows the social and political commitment of the founder, a great street artist that is still used to speaking his mind and supporting free speech and thought: it's easy to remember the worldwide famous four-color printing for the Obama election campaign, but nothing beats the iconic white-on-red Obey logo, which comes from John Carpenter's "They Live".</p><br>
+<strong>PIVA:</strong>IT 12344375607  <strong>Telephone:</strong>0292.76.41.278
+<hr class="lineDiv">
+
+<h1 id="patagonia">Patagonia</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/patagonia.png">
+</div>
+<p>Looking for the proper instruments for his climbing in the San Fernando Valley, in 1973 Yvon Chouinard founded Patagonia, an outdoor brand producing mountain apparel and tools and displaying a colorful logo that pays homage to the Fitz Roy mount skyline. Patagonia went beyond the outdated wool garments, signing different contracts to import polyurethane jackets and sweats from Europe: anyway, a great step forward comes with the synthetic pile debut, with an improved protection from cold and damp to stay warm and dry in every situation. Technical fabrics and a modern color palette did the rest, legitimizing Patagonia leading role all over the world: now it's also considered a truly appreciated lifestyle brand, with its personal flair and different lines that range from running to surf, from mountain technical stuff to everyday clothes </p><br>
+<strong>PIVA:</strong>IT 12348465607  <strong>Telephone:</strong>0292.76.45.278
+<hr class="lineDiv">
+
+<h1 id="reebook">Reebok</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/reebok.png">
+</div>
+<p>In 1890, the J.W. Foster & Sons was one of the first company ever to craft running shoes equipped with spikes, but it definitely break through in 1958, after merging with Reebok: the Boston-based brand gained a resounding success as fast as the African antelope it's named after, skipping steps and introducing always new technologies. Reebok Freestyle ruled the early '80s, reign of aerobic and fitness: over the next few years, it dealt with other fields, building the very first feeling with tennis and basketball. Changing Reebok logo in 1986 - a sleeker, plainer design instead of the Union Jack flag - was just the first step of a deep restyling: Reebok became the favorite of popular athletes like Venus Williams, Ryan Giggs and Shawn Kemp, a sort of casual, versatile alternative to outdated sport kicks. </p><br>
+<strong>PIVA:</strong>IT 12348465107  <strong>Telephone:</strong>0292.76.45.178
+<hr class="lineDiv">
+
+<h1 id="stussy">Stussy</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/stussy.png">
+</div>
+<p>In 1980 Shawn Stussy started producing surfboards in California, signing firsthand every single item with a black marker due to its graffiti background. In 1984 he joins his forces with Frank Sinatra Jr. establishing an apparel brand that produces white blank bucket caps with the Stussy logo on the front, nothing but a double woven "s" along with a "Stussy No. 4" writing mocking the Chanel slogan: the Stussy saucy and witty attitude seduces even the East Coast after the first official store opening in New York in 1991, all thanks to the collaboration of James Jebbia, the future founder of the now mythical Supreme skating brand. The influence of cultural excitements from back then and the frequent Shawn foreign trips affect his approach to fashion, baiting different personalities around this emerging brand: the Stussy Tribe was born, just an heterogeneous group of young talented kids sharing common passions, ideals and targets and exchanging opinions and pieces of advice</p><br>
+<strong>PIVA:</strong>IT 17748465107  <strong>Telephone:</strong>0292.76.45.198
+<hr class="lineDiv">
+
+<h1 id="the">The North Face</h1><br>
+<div class="wrapperImage">
+    <img class="brandLogo" src="imgBrand/the-north-face.png">
+</div>
+<p>Founded in 1966 just few meters away from the sunny Californian beaches by the ecologist businessman Douglas Thompkins, The North Face was named after the coldest and most arduous mountains' slope, the hardest to climb. During the '60s, The North Face manufactured technical mountain apparel and outdoor tools for climbing, winning the hearts of great rock climbers all over the world: hence the motto "Never Stop Exploring", the course of action behind every The North Face technology. Starting from late '80s, bright colors and all-over graphics of skiing clothing spread through streets, expressing the will to express ideas of an entire generation. </p><br>
+<strong>PIVA:</strong>IT 17748461107  <strong>Telephone:</strong>0292.76.45.190
+<hr class="lineDiv">
+
 <footer>
     <div id="footerSup">
         <div>
             <i class=" foot-icon fas fa-lock"></i><br>
         </div>
         <bold>Secure payment</bold>
-        <p style="font-weight: lighter"> thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
+        <p class="lighter"> Thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
         <br>
         <div>
             <i class="foot-icon fas fa-check"></i><br>
         </div>
         <bold>Free shipping</bold>
-        <p style="font-weight: lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
+        <p class="lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
         <hr>
 
         <bold>Client Service</bold>
 
-        <p style="font-weight: lighter">  Email:info@mattchy.com</p>
+        <p class="lighter">  Email:info@mattchy.com</p>
         <br>
         <br>
         <hr>
@@ -327,10 +352,8 @@
         </div>
     </div>
     <div id="footerInf">
-        © 2002-2019 - GRAFFITISHOP® è un marchio registrato di proprietà di Pluss srl, via F.d'Ovidio, 3 Milano
-        <br>Reg. Imp. Cam. Comm. PV 02225020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02225020185
-
-
+        © 2002-2019 - MATTCHY® è un marchio registrato di proprietà di Maze srl, via F.Corridoni, 3 Milano
+        <br>Reg. Imp. Cam. Comm. PV 02223020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02223020185
     </div>
 
 </footer>
@@ -338,7 +361,6 @@
 <script src="jquery.js"></script>
 <script src="loginProcess.js"></script>
 <script src="scriptComune.js"></script>
-<script src="BrandScript.js"></script>
 
 </body>
 </html>

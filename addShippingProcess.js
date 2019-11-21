@@ -15,11 +15,13 @@ $(document).ready(function () {
                     district:""+ formOut[6].value+"",
                     telefono:""+ formOut[7].value+"",
                     selected:""+ formOut[8].value+""}]};
-            console.log("usertmpFinalPrimo:"+usertmp.adresses[0]);
             localStorage.setItem(localStorage.getItem("access"),JSON.stringify(usertmp));
             $(location).attr('href','shoppingCart.html');
         }else {
             const scLength=usertmp.adresses.length;
+            for(var i=0;i<scLength;i++) {
+                usertmp.adresses[i].selected="0";
+            }
             console.log(scLength);
             usertmp.adresses[scLength]={
                 first_name:""+ formOut[0].value+"",
@@ -31,7 +33,6 @@ $(document).ready(function () {
                 district:""+ formOut[6].value+"",
                 telefono:""+ formOut[7].value+"",
                 selected:""+ formOut[8].value+""};
-            console.log("usertmpFinal:"+JSON.stringify(usertmp.adresses[scLength]));
             localStorage.setItem(localStorage.getItem("access"),JSON.stringify(usertmp));
         $(location).attr('href','shoppingCart.html');
         }

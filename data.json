@@ -49,13 +49,27 @@
 "price":"119.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"7"},
+"size":"40.5", "number":"1"},
 {
-"size":"m", "number":"8"},
+"size":"41", "number":"2"},
 {
-"size":"l","number":"3"},
+"size":"41.5", "number":"4"},
 {
-"size":"xl", "number":"4"}],
+"size":"42", "number":"1"},
+{
+"size":"42.5", "number":"2"},
+{
+"size":"43", "number":"3"},
+{
+"size":"43.5", "number":"1"},
+{
+"size":"44", "number":"1"},
+{
+"size":"44.5", "number":"2"},
+{
+"size":"45", "number":"1"},
+{
+"size":"46", "number":"1"}],
 "colour":"White/Piedmont Grey",
 "material":"mix",
 "season":"winter",
@@ -64,7 +78,7 @@
 },
 {
 "name":"LT T-shirt",
-"category":"t-shirt & shirts",
+"category":"t-shirts & shirts",
 "brand":"Asics",
 "gender":"U",
 "price":"45.00",
@@ -127,7 +141,7 @@
 },
 {
 "name":"Cold Front Tracksuit Jacket",
-"category":"hoodies & sweatshirt",
+"category":"hoodies & sweatshirts",
 "brand":"Butter Goods",
 "gender":"M",
 "price":"145.00",
@@ -148,7 +162,7 @@
 },
 {
 "name":"Hooded Matt Martin Flags Sweathirt",
-"category":"hoodies & sweatshirt",
+"category":"hoodies & sweatshirts",
 "brand":"Carhartt",
 "gender":"M",
 "price":"102.00",
@@ -196,14 +210,8 @@
 "price":"15.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"10"},
-{
-"size":"m", "number":"0"},
-{
-"size":"l", "number":"0"},
-{
-"size":"xl", "number":"0"
-}],
+"size":"U", "number":"10"}
+],
 "colour":"camo",
 "material":"mix",
 "season":"all",
@@ -233,7 +241,7 @@
 },
 {
 "name":"Pure Crewneck",
-"category":"hoodies & sweatshirt",
+"category":"hoodies & sweatshirts",
 "brand":"Fila",
 "gender":"M",
 "price":"59.00",
@@ -296,7 +304,7 @@
 },
 {
 "name":"Logo T-shirt",
-"category":"t-shirt & shirts",
+"category":"t-shirts & shirts",
 "brand":"Iuter",
 "gender":"m",
 "price":"39.00",
@@ -407,13 +415,8 @@
 "price":"28.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"5"},
-{
-"size":"m", "number":"0"},
-{
-"size":"l", "number":"0"},
-{
-"size":"xl", "number":"0"}],
+"size":"U", "number":"5"}
+],
 "colour":"black",
 "material":"polyester",
 "season":"all",
@@ -508,10 +511,7 @@
 "price":"99.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"5"},
-{"size":"m", "number":"0"},
-{"size":"l", "number":"0"},
-{"size":"xl", "number":"0"}],
+"size":"U", "number":"5"}],
 "colour":"black",
 "material":"SS",
 "season":"all",
@@ -525,10 +525,7 @@
 "price":"99.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"6"},
-{"size":"m", "number":"0"},
-{"size":"l", "number":"0"},
-{"size":"xl", "number":"0"}],
+"size":"U", "number":"6"}],
 "colour":"grey",
 "material":"SS",
 "season":"all",
@@ -576,10 +573,7 @@
 "price":"139.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"79"},
-{"size":"m", "number":"0"},
-{"size":"l", "number":"0"},
-{"size":"xl", "number":"0"}],
+"size":"U", "number":"79"}],
 "colour":"Birch White",
 "material":"mix",
 "season":"all",
@@ -654,10 +648,7 @@
 "price":"22.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"6"},
-{"size":"m", "number":"8"},
-{"size":"l", "number":"5"},
-{"size":"xl", "number":"4"}],
+"size":"U", "number":"6"}],
 "colour":"black",
 "material":"cotton",
 "season":"winter",
@@ -708,10 +699,7 @@
 "price":"99.00",
 "availability":"1",
 "wardrobe":[{
-"size":"s", "number":"50"},
-{"size":"m", "number":"0"},
-{"size":"l", "number":"0"},
-{"size":"xl", "number":"0"}],
+"size":"U", "number":"50"}],
 "colour":"camo",
 "material":"mix",
 "season":"all",

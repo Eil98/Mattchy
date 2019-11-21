@@ -7,6 +7,7 @@
     <title>Mattchy</title>
 
     <link rel="stylesheet"  type="text/css" href="StyleComune.css">
+    <link rel="stylesheet" type="text/css" href="alerts/blurt.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet " type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
@@ -18,7 +19,7 @@
     <div id="searchOverlay" class="overlay">
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlay-content">
-            <form action="/action_page.php">
+            <form class="searchForm">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit" id="logSubmit"><i class="fa fa-search"></i></button>
             </form>
@@ -29,7 +30,7 @@
         <span class="closeBtn" title="Close Overlay">×</span>
         <div class="overlayLog-content">
             <form action="" class="login-content" id="login-formGroup">
-                <p style="color: white; font-size: 40px">Login</p>
+                <p class="loginP">Login</p>
                 <br>
                 <input type="email" class="formOverlay" id="emailLog" placeholder="Username" name="username" required="required">
                 <br>
@@ -49,40 +50,41 @@
                 <a href="#" ><img  class="gotoHome" src="LogoMattchy2.png" width="70"></a>
             </div>
             <div class="searchwrap">
-                <button class="openBtn"><i class="fa fa-search "></i></button>
+                <button class="openBtn" id="searchObj"><i class="fa fa-search "></i></button>
             </div>
         </div>
+
         <ul class="menuUL">
             <li id="logoDex" class="menuUL-LI"><a href="#"  class="menuUL-LI-A "><img class="gotoHome" src="LogoMattchy2.png" width="58"></a></li>
-            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Category</p><i class="fa fa-sort-desc"></i></a>
+            <li class="subMenu menuUL-LI"><a href="#" class="menuUL-LI-A"><i class="fas fa-tshirt menuUL-LI-I"></i> <p class="menuPSC">Category</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
                 <ul class="menuUL-UL">
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Hoodies & Sweatshirts</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">T-Shirts & Shirt</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Pants</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shorts</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Shoes</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Accessories</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Jackets & Coats</p></a></li>
-                    <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A"><p style=" color:#ffffff;margin-bottom: 0px;">Underwear & Swimwear</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1hoodies & sweatshirts"><p class="menuP">Hoodies & Sweatshirts</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1t-shirts & shirts"><p class="menuP">T-Shirts & Shirt</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1pants"><p class="menuP">Pants</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1shorts"><p class="menuP">Shorts</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1shoes"><p class="menuP">Shoes</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1accessories"><p class="menuP">Accessories</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1jackets & coats"><p class="menuP">Jackets & Coats</p></a></li>
+                    <li class="menuUL-UL-LI"><a  class="menuUL-LI-A  Mcategoryfilter" id="1underwear & swimwear"><p class="menuP">Underwear & Swimwear</p></a></li>
                 </ul>
             </li>
-            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Brands</p></a></li>
-            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menu-UL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px">Shopping-Cart</p></a></li>
+            <li class="menuUL-LI"><a href="#"  class="menuUL-LI-A" id="brandTrigg"><i class="fas fa-industry menuUL-LI-I"></i> <p class="menuPSC">Brands</p></a></li>
+            <li id="shopCart" class="menuUL-LI"><a href="#" class="menuUL-LI-A" id="shopCartTrigg"><i class="fa fa-shopping-cart menuUL-LI-I"></i> <p class="menuPSC">Shopping-Cart</p></a></li>
 
             <li class="subMenu menuUL-LI" id="submenu-user">
                 <div id="normalmenu">
-                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">Sign Up/Log in</p></a>
+                    <a href="#" class="openBtnLog menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p class="menuPSC">Sign Up/Log in</p></a>
                 </div>
                 <div  id="usermenu">
-                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p style="display: inline-block; color: white;margin-bottom: 0px;">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
+                    <a href="#" class="menuUL-LI-A"><i class="fas fa-user menuUL-LI-I"></i> <p class="menuPSC">My Account</p><i class="fa fa-sort-desc menuUL-LI-I"></i></a>
                     <ul class="menuUL-UL">
-                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="wishlist"><p style=" color:#ffffff;margin-bottom: 0px;">Wishlist</p></a></li>
-                        <li class="menuUL-UL-LI"><a href="#" class="menuUL-LI-A" id="myorders"><p style=" color:#ffffff;margin-bottom: 0px;">My orders</p></a></li>
-                        <li class="menuUL-UL-Li"><a href="#" class="menuUL-LI-A" id="logOut"><p style=" color:#ffffff;margin-bottom: 0px;">Logout</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="order.html" class="menuUL-LI-A" id="myorders"><p class="menuP">My orders</p></a></li>
+                        <li class="menuUL-UL-LI"><a href="" class="menuUL-LI-A" id="logOut"><p class="menuP">Logout</p></a></li>
                     </ul>
                 </div>
             </li>
         </ul>
+
     </div>
 </header>
 
@@ -91,51 +93,68 @@
 <br>
 
 <div class="container-fluid">
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Library</li>
+            <li class="breadcrumb-item "><a href="mainFinale.html" aria-current="page">Home</a></li>
         </ol>
     </nav>
+
     <div class= "btn-toolbar justify-content-center" role="group" >
 
         <div class="btn-toolbar" role="rowgroup">
 
             <div class="btn-group-sm dropdown margin-flter" role="group" aria-label="">
-                <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
                     Category
                 </button>
 
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">T-shirt</a>
-                    <a class="dropdown-item" href="#">Pants</a>
-                    <a class="dropdown-item" href="#">Jackets</a>
+                    <button class="dropdown-item categoryfilter" id="t-shirts & shirts" >T-shirts & Shirts</button>
+                    <button class="dropdown-item categoryfilter" id="pants" >Pants</button>
+                    <button class="dropdown-item categoryfilter" id="shorts" >Shorts</button>
+                    <button class="dropdown-item categoryfilter" id="hoodies & sweatshirts" >Hoodies & Sweatshirts</button>
+                    <button class="dropdown-item categoryfilter" id="jackets & coats" >Jackets & Coats</button>
+                    <button class="dropdown-item categoryfilter" id="underwear & swimwear" >Underwear & swimwear</button>
+                    <button class="dropdown-item categoryfilter" id="shoes" >Shoes</button>
+                    <button class="dropdown-item categoryfilter" id="accessories" >Accessories</button>
                 </div>
 
             </div>
 
-            <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
             <div class="btn-group-sm dropdown margin-flter" role="group">
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle " data-toggle="dropdown">
                     Gender
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">F</a>
-                    <a class="dropdown-item" href="#">M</a>
+                    <button class="dropdown-item genderfilter" id="F" >F</button>
+                    <button class="dropdown-item genderfilter" id="Ma" >M</button>
                 </div>
             </div>
 
-            <!-- <div class="dropdown  col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
             <div class="btn-group-sm dropdown margin-flter" role="group">
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
                     Brand
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Gucci</a>
-                    <a class="dropdown-item" href="#">Balenciaga</a>
-                    <a class="dropdown-item" href="#">Stone Island</a>
-
+                    <button class="dropdown-item brandfilter" id="Adidas Originals" >Adidas Originals</button>
+                    <button class="dropdown-item brandfilter" id="Asics" >Asics</button>
+                    <button class="dropdown-item brandfilter" id="Australian" >Australian</button>
+                    <button class="dropdown-item brandfilter" id="Butter Goods" >Butter Goods</button>
+                    <button class="dropdown-item brandfilter" id="Carhartt" >Carhartt</button>
+                    <button class="dropdown-item brandfilter" id="Dickies" >Dickies</button>
+                    <button class="dropdown-item brandfilter" id="Fila" >Fila</button>
+                    <button class="dropdown-item brandfilter" id="Iuter" >Iuter</button>
+                    <button class="dropdown-item brandfilter" id="Levi's" >Levi's</button>
+                    <button class="dropdown-item brandfilter" id="Mitchell & Ness" >Mitchell & Ness</button>
+                    <button class="dropdown-item brandfilter" id="New era" >New era</button>
+                    <button class="dropdown-item brandfilter" id="Nike" >Nike</button>
+                    <button class="dropdown-item brandfilter" id="Nixon" >Nixon</button>
+                    <button class="dropdown-item brandfilter" id="Obey" >Obey</button>
+                    <button class="dropdown-item brandfilter" id="Patagonia" >Patagonia</button>
+                    <button class="dropdown-item brandfilter" id="Reebok" >Reebok</button>
+                    <button class="dropdown-item brandfilter" id="Stussy" >Stussy</button>
+                    <button class="dropdown-item brandfilter" id="The north face" >The north face</button>
                 </div>
             </div>
         </div>
@@ -149,30 +168,31 @@
                     Sizes
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">XS</a>
-                    <a class="dropdown-item" href="#">S</a>
-                    <a class="dropdown-item" href="#">M</a>
-                    <a class="dropdown-item" href="#">L</a>
-                    <a class="dropdown-item" href="#">XL</a>
-                    <a class="dropdown-item" href="#">XXL</a>
+                    <button class="dropdown-item sizesfilter" id="S">S</button>
+                    <button class="dropdown-item sizesfilter" id="M">M</button>
+                    <button class="dropdown-item sizesfilter" id="L">L</button>
+                    <button class="dropdown-item sizesfilter" id="XL">XL</button>
+
                 </div>
             </div>
 
             <div class="btn-group-sm dropdown margin-flter" role="group">
                 <!-- <div class="dropdown col-sm-6 col-md-4 col-lg-2 col-xl-2" >-->
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                    Sort by
+                    Price
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Price Lower-Higher</a>
-                    <a class="dropdown-item" href="#">Price Higher-Lower</a>
-                    <a class="dropdown-item" href="#">Alphabetical (A-Z)</a>
+                    <button class="dropdown-item pricefilter" id="50.00"><50.00€</button>
+                    <button class="dropdown-item pricefilter" id="70.00"><70.00€</button>
+                    <button class="dropdown-item pricefilter"id="100.00"><100.00€</button>
+                    <button class="dropdown-item pricefilter"id="150.00"><150.00€</button>
+
                 </div>
             </div>
 
             <div class="btn-group-sm dropdown margin-flter" role="group">
                 <!-- <div class=" col-sm-6 col-md-4 col-lg-2 col-xl-2">-->
-                <button type="button" class="btn btn-outline-danger ">Reset Filters</button>
+                <button type="button" class="btn btn-outline-danger "id="reset">Reset Filters</button>
             </div>
 
         </div>
@@ -189,18 +209,18 @@
             <i class=" foot-icon fas fa-lock"></i><br>
         </div>
         <bold>Secure payment</bold>
-        <p style="font-weight: lighter"> thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
+        <p class="lighter"> Thanks to our secure server and encryption methods,your payment cart won't be stolen. </p>
         <br>
         <div>
             <i class="foot-icon fas fa-check"></i><br>
         </div>
         <bold>Free shipping</bold>
-        <p style="font-weight: lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
+        <p class="lighter"> For 50€ minimum order.Secure shipping with SDA.</p>
         <hr>
 
         <bold>Client Service</bold>
 
-        <p style="font-weight: lighter">  Email:info@mattchy.com</p>
+        <p class="lighter">  Email:info@mattchy.com</p>
         <br>
         <br>
         <hr>
@@ -216,18 +236,16 @@
         </div>
     </div>
     <div id="footerInf">
-        © 2002-2019 - GRAFFITISHOP® è un marchio registrato di proprietà di Pluss srl, via F.d'Ovidio, 3 Milano
-        <br>Reg. Imp. Cam. Comm. PV 02225020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02225020185
-
-
+        © 2002-2019 - MATTCHY® è un marchio registrato di proprietà di Maze srl, via F.Corridoni, 3 Milano
+        <br>Reg. Imp. Cam. Comm. PV 02223020185 - Cap. Soc. 50.000 € I.V. - P.Iva 02223020185
     </div>
 
 </footer>
 
 <script src="jquery.js"></script>
-<script src="loginProcess.js"></script>
 <script src="scriptComune.js"></script>
 <script src="objectProcess.js"></script>
+<script src="alerts/blurt.min.js"></script>
 
 </body>
 </html>
