@@ -1,13 +1,14 @@
 $(document).ready(function () {
+    generateShoppingCart();
     //riempimento della parte grafica dello shopping cart
     function generateShoppingCart() {
-        var data=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
-        var length=data.shopping_cart.length;
+        let data=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
+        let length=data.shopping_cart.length;
 
-        for(var i=0;i<length;i++){
+        for(let i=0;i<length;i++){
             if(data.shopping_cart[i]!=null ) {
-                var cardObj = "" +
-                    "<div class=\"card-group\" >\n" +
+                let cardObj = "" +
+                    "<div class=\"card-group " + i + "\" >\n" +
                     "        <div class=\"card \">\n" +
                     "            <div class=\"row no-gutters mb-0\">\n" +
                     "                <img src=\"" + data.shopping_cart[i].image + "\" class=\"card-img\">\n" +
@@ -39,6 +40,7 @@ $(document).ready(function () {
 
 
                 $(".shopcart-container").append(cardObj);
+                console.log("inseriri objects");
                 $("#"+""+i+"").val(data.shopping_cart[i].quantity);
                 shoppingcartSummaryze();
             }
@@ -50,12 +52,12 @@ $(document).ready(function () {
     shoppingTotal();
     console.log("total ini:   "+total);
 
-//Calcolo totale carrello
+    //Calcolo totale carrello
     function objectsTotal() {
-        var usertmp=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
-        var totProducts=0;
+        let usertmp=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
+        let totProducts=0;
         console.log("Shop length:  "+ usertmp.shopping_cart.length);
-        for (var x=0;x<usertmp.shopping_cart.length;x++) {
+        for (let x=0;x<usertmp.shopping_cart.length;x++) {
             if(usertmp.shopping_cart[x]!=null)
                 totProducts=totProducts +(parseInt(usertmp.shopping_cart[x].price) * parseInt(usertmp.shopping_cart[x].quantity));
         }
@@ -64,7 +66,7 @@ $(document).ready(function () {
 
     //Calcolo totale carrello con spedizione
     function shoppingTotal() {
-        var tmpTotal=objectsTotal();
+        let tmpTotal=objectsTotal();
         if(tmpTotal <50) {
             total = tmpTotal + shipFees;
         }
@@ -86,7 +88,6 @@ $(document).ready(function () {
         $(".tot").html(""+ total+"€");
     }
 
-    generateShoppingCart();
     $(".closeBtn").click(function () {
         $("#adressesOverlay").css("display", "none");
         $("#overlayCards").css("display", "none")
@@ -139,64 +140,61 @@ $(document).ready(function () {
 
 
     //Modifica quantità
+
     $(".cart-select").on('change',function () {
-        var data=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
-        var objId=$(this).attr("id");
-        var objs=JSON.parse(localStorage.getItem("objects"));
+        let data=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
+        let objId=$(this).attr("id");
+        let objs=JSON.parse(localStorage.getItem("objects"));
 
         if ( data.shopping_cart[objId] != null) {
 
             if ($(this).val()==0) {
                     data.shopping_cart[objId]=null;
                 localStorage.setItem(localStorage.getItem("access"),JSON.stringify(data));
-                $(".shopcart-container").empty();
-                generateShoppingCart();
                 shoppingTotal();
-            }
-            for (var i = 0; i < objs.length; i++) {
-                if (data.shopping_cart[objId] != null) {
-                    if (objs[i].name == data.shopping_cart[objId].name) {
-                        if (parseInt(objs[i].wardrobe[mappingSize(data.shopping_cart[objId].selected_size)].number) < $(this).val()) {
-                            blurt({
-                                title: 'Error',
+                let child=$("."+ objId+"");
+                console.log("child"+child);
+               child.remove();
 
-
-                                text: 'Not enough objects,select a different quantity',
-
-                                /*
-                               * alert type
-                               * success, error, warning, info
-                               * default is 'default'
-                               */
-                                type: 'error',
-
-                                okButtonText: 'Ok',
-
-                                escapable: true
-                            });
-
-                            break;
-                        } else {
-                            data.shopping_cart[objId].quantity = $(this).val();
-                            $("#" + "" + i + "").val(data.shopping_cart[objId].quantity);
-                            localStorage.setItem(localStorage.getItem("access"), JSON.stringify(data));
-                            shoppingTotal();
+            } else {
+                for (let i = 0; i < objs.length; i++) {
+                    console.log("shopcart length" + objs.length);
+                    if (data.shopping_cart[objId] != null) {
+                        if (objs[i].name == data.shopping_cart[objId].name) {
+                            if (parseInt(objs[i].wardrobe[mappingSize(data.shopping_cart[objId].selected_size)].number) < $(this).val()) {
+                                blurt({
+                                    title: 'Error',
+                                    text: 'Not enough objects,select a different quantity',
+                                    type: 'error',
+                                    okButtonText: 'Ok',
+                                    escapable: true
+                                });
+                            } else {
+                                data.shopping_cart[objId].quantity = $(this).val();
+                                $("#" + "" + i + "").val(data.shopping_cart[objId].quantity);
+                                localStorage.setItem(localStorage.getItem("access"), JSON.stringify(data));
+                                shoppingTotal();
+                            }
                             break;
                         }
                     }
                 }
+                console.log("uscito da cart-select/cliclo");
             }
         }
+
+        console.log("uscito da cart-select");
     });
+
 
     //Funzione che toglie gli oggetti dal DB al momento dell' acquisto
     function ModifyQuantityObjects(name,size,qta) {
-        var objs=JSON.parse(localStorage.getItem("objects"));
+        let objs=JSON.parse(localStorage.getItem("objects"));
         var name=name;
         var size=size;
         var qta=qta;
 
-        for(var i=0;i<objs.length;i++){
+        for(let i=0;i<objs.length;i++){
             if(objs[i].name==name){
                 console.log("prima;;"+objs[i].wardrobe[mappingSize(size)].number);
                 objs[i].wardrobe[mappingSize(size)].number=objs[i].wardrobe[mappingSize(size)].number-qta;
@@ -210,9 +208,9 @@ $(document).ready(function () {
 //Gestione Pressione purchase the order
     $('.shop-form').on("submit", function () {
         event.preventDefault();
-        var usertmp=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
-        var scLength=usertmp.shopping_cart.length;
-        var formOut = $(this).serializeArray();
+        let usertmp=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
+        let scLength=usertmp.shopping_cart.length;
+        let formOut = $(this).serializeArray();
 
         if (formOut[3].value != "") {                                                //Insert Discount code
             if (formOut[3].value == "10"){
@@ -220,10 +218,10 @@ $(document).ready(function () {
             }
         }
                                                                                     //riempimento ordine
-        var thisadress = formOut[0].value;
-        var thiscard = formOut[1].value;
-        var exp_date = Date.now() + 86400000;
-        var index = 0;
+        let thisadress = formOut[0].value;
+        let thiscard = formOut[1].value;
+        let exp_date = Date.now() + 86400000;
+        let index = 0;
         if (usertmp.orders == undefined) {
             usertmp = {
                 ...usertmp,
@@ -236,7 +234,7 @@ $(document).ready(function () {
                     content: []
                 }]
             };
-            for (var y = 0; y < scLength; y++) {
+            for (let y = 0; y < scLength; y++) {
                 if (usertmp.shopping_cart[y] != null) {
                     usertmp.orders[0].content[index] = {
                         name: ""+ usertmp.shopping_cart[y].name+"",
@@ -248,7 +246,7 @@ $(document).ready(function () {
                 }
             }
         }else {
-            var orLenght=usertmp.orders.length;
+            let orLenght=usertmp.orders.length;
             usertmp.orders[orLenght]={
                 tot: "" + total + "",
                 date: "" + exp_date + "",
@@ -257,7 +255,7 @@ $(document).ready(function () {
                 card: "" + thiscard + "",
                 content: []
             };
-            for (var y = 0; y < scLength; y++) {
+            for (let y = 0; y < scLength; y++) {
                 if (usertmp.shopping_cart[y] != null) {
                     usertmp.orders[orLenght].content[index] = {
                         name: ""+ usertmp.shopping_cart[y].name+"",
@@ -270,7 +268,7 @@ $(document).ready(function () {
             }
         }
                                                                                         //svuota carrello
-        for (var i=0;i<usertmp.shopping_cart.length;i++){
+        for (let i=0;i<usertmp.shopping_cart.length;i++){
             if(usertmp.shopping_cart[i]!=null){
                 var size=usertmp.shopping_cart[i].selected_size;
                 var name=usertmp.shopping_cart[i].name;
@@ -341,12 +339,12 @@ $(document).ready(function () {
 
     //Funzione che aggiorna il sommario del carrello
     function shoppingcartSummaryze() {
-        var usertmp = JSON.parse(localStorage.getItem(localStorage.getItem("access")));
+        let usertmp = JSON.parse(localStorage.getItem(localStorage.getItem("access")));
         if(usertmp.cards!=undefined && usertmp.adresses!=undefined) {
-            var cardLength = usertmp.cards.length;
-            var adressLength = usertmp.adresses.length;
+            let cardLength = usertmp.cards.length;
+            let adressLength = usertmp.adresses.length;
 
-            for (var i = 0; i < cardLength; i++) {
+            for (let i = 0; i < cardLength; i++) {
                 if (usertmp.cards[i].selected == "1") {
                     $("#selectedCALabel").empty();
                     $("#selectedCALabel").append("<div>" + usertmp.cards[i].first_name + "  " + usertmp.cards[i].last_name + "</div>\n" +
@@ -356,7 +354,7 @@ $(document).ready(function () {
                     $("#selectedCA").attr("checked", "true");
                 }
             }
-            for (var j = 0; j < adressLength; j++) {
+            for (let j = 0; j < adressLength; j++) {
                 if (usertmp.adresses[j].selected == "1") {
                     $("#selectedSALabel").empty();
                     $("#selectedSALabel").append("<div>" + usertmp.adresses[j].first_name + "  " + usertmp.adresses[j].last_name + "</div>\n" +
@@ -372,9 +370,9 @@ $(document).ready(function () {
 
     //Gestione processi degli Overlay
     function overlayProcess() {
-    var usertmp=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
-    var cardBox="";
-    var adressBox="";
+    let usertmp=JSON.parse(localStorage.getItem(localStorage.getItem("access")));
+    let cardBox="";
+    let adressBox="";
     if(usertmp.cards== undefined){
         $(location).attr('href', 'addCard.html')
     }
@@ -382,12 +380,12 @@ $(document).ready(function () {
         $(location).attr('href', 'addShipping.html')
     }
 
-    var cardLength=usertmp.cards.length;
-    var adressLength=usertmp.adresses.length;
+    let cardLength=usertmp.cards.length;
+    let adressLength=usertmp.adresses.length;
     $(".adressesbox-container").empty();
     $(".cardsbox-container").empty();
 
-    for(var i=0;i<cardLength;i++){
+    for(let i=0;i<cardLength;i++){
          cardBox="" +
             "<div class=\"inputGroup\">\n" +
             "<input id=\"cards"+i+"\" name=\"cards\" value=\""+i+"\" type=\"radio\"/>\n" +
@@ -400,7 +398,7 @@ $(document).ready(function () {
 
         $(".cardsbox-container").append(cardBox);
     }
-    for(var j=0;j<adressLength;j++){
+    for(let j=0;j<adressLength;j++){
         adressBox= "" +
             "<div class=\"inputGroup\">\n" +
             "<input id=\"adresses"+j+"\" name=\"adresses\" value=\""+j+"\" type=\"radio\"/>\n" +
@@ -417,13 +415,13 @@ $(document).ready(function () {
     }
     $('.overlayCards-content').on("submit",function () {
         event.preventDefault();
-        var formOut = $(this).serializeArray();
+        let formOut = $(this).serializeArray();
         console.log(formOut,formOut.length);
-        var selected=parseInt(formOut[0].value);
+        let selected=parseInt(formOut[0].value);
         usertmp.cards[selected].selected="1";
         $("#selectedCALabel").empty();
 
-        for(var i=0;i<cardLength;i++){
+        for(let i=0;i<cardLength;i++){
             if(i!=selected) {
                 usertmp.cards[i].selected = "0";
             }else {
@@ -444,12 +442,12 @@ $(document).ready(function () {
 
     $('.overlayAdress-content').on("submit",function () {
         event.preventDefault();
-        var formOut = $(this).serializeArray();
-        var selected=parseInt(formOut[0].value);
+        let formOut = $(this).serializeArray();
+        let selected=parseInt(formOut[0].value);
         usertmp.adresses[selected].selected="1";
         $("#selectedSALabel").empty();
 
-        for(var j=0;j<adressLength;j++){
+        for(let j=0;j<adressLength;j++){
             if(j!=selected) {
                 usertmp.adresses[j].selected = "0";
             }else {
