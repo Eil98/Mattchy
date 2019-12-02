@@ -1,13 +1,20 @@
 $(document).ready(function () {
-var pwok=0;
 var ok=1;
     $('#password, #confirm_password').on('keyup', function () {
         if ($('#password').val() == $('#confirm_password').val()) {
             $('#message').html('Matching').css('color', 'green');
-            pwok=1;
         } else
             $('#message').html('Password Not Matching').css('color', 'red');
+            console.log("Incorrect match"+pwok);
     });
+    function valPw(){
+        if ($('#password').val() == $('#confirm_password').val()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     $('#email').on('keyup', function () {
         ok=1;
@@ -62,9 +69,8 @@ var ok=1;
         var dataString = JSON.stringify(data);
 
         // ...this is where we’d actually do something with the form data...
-        console.log(data);
 
-        if(ok!=0 && pwok!=0) {
+        if(ok!=0 && valPw()) {
             localStorage.setItem(key, dataString);
             localStorage.setItem("access", key);
             $(location).attr('href', 'mainFinale.html');
@@ -73,14 +79,8 @@ var ok=1;
             blurt({
                 title: 'Error',
 
-
                 text: 'Invalid registration,please try again!',
 
-                /*
-               * alert type
-               * success, error, warning, info
-               * default is 'default'
-               */
                 type: 'error',
 
                 okButtonText: 'Ok',
@@ -95,7 +95,7 @@ var ok=1;
     form.addEventListener('submit', handleFormSubmit);
 
     const isValidElement = element => {
-        if (element.name != "confirm_password")
+        if (element.name != "confirm_password" )
             return element.name && element.value;
     };
 });

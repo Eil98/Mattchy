@@ -452,7 +452,7 @@ $(document).ready(function () {
         }
 
         //TODO:  Novembre
-    //TODO:controllare consistenza della quantita
+    //TODO:Problrma inserimento passw durante registrazione
     //TODO:Documento di analisi dei requisti con esempi e mini presentazione
 
 
