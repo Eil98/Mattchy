@@ -604,18 +604,7 @@
 "gender":"M",
 "price":"80.00",
 "availability":"1",
-"wardrobe":[{
-"size":"40.5", "number":"1"},
-{"size":"41", "number":"3"},
-{"size":"41.5", "number":"5"},
-{"size":"42", "number":"1"},
-{"size":"42.5", "number":"2"},
-{"size":"43", "number":"5"},
-{"size":"43.5", "number":"6"},
-{"size":"44", "number":"4"},
-{"size":"44.5", "number":"2"},
-{"size":"45", "number":"1"},
-{"size":"46", "number":"1"}],
+				
 "colour":"white",
 "material":"mix",
 "season":"winter",
@@ -705,5 +694,52 @@
 "season":"all",
 "description":"The North Face Borealis is a multi-purpose 15” laptop compatible backpack with a 29 litre capacity boosted by an exterior bungee cord stash net. Comfort is assured due to anatomically shaped FlexVent injection moulded padded shoulder straps and a padded Airmesh back panel with Spine Channel and PE sheet for extra back comfort and support. The large main compartment has a laptop sleeve, organisation and a hydration port. Side mesh water bottle pockets keep fluids to hand.",
 "image":"img/accessori-the-north.jpg"
+},
+{
+"name":"WMNS Maiko Puffa Jacket",
+"category":"jackets & coats",
+"brand":"Fila",
+"gender":"F",
+"price":"149.00",
+"availability":"1",
+"wardrobe":[{
+"size":"s", "number":"5"},
+{
+"size":"m", "number":"2"},
+{
+"size":"l", "number":"1"},
+{
+"size":"xl", "number":"7"
+}],
+"colour":"white",
+"material":"polyester",
+"season":"all",
+"description":"Fila intermediate jacket with zip closure, two side pockets, contrasting sleeves with piping details on the armholes. High collar with logo print, elasticated bottom and cuffs. Women's model.",
+"image":"img/giacche-fila-wmns.jpg"
+},
+{
+"name":"WMNS Air Max 90",
+"category":"shoes",
+"brand":"Nike",
+"gender":"F",
+"price":"125.00",
+"availability":"1",
+"wardrobe":[{
+"size":"40.5", "number":"1"},
+{"size":"41", "number":"3"},
+{"size":"41.5", "number":"5"},
+{"size":"42", "number":"1"},
+{"size":"42.5", "number":"2"},
+{"size":"43", "number":"0"},
+{"size":"43.5", "number":"0"},
+{"size":"44", "number":"0"},
+{"size":"44.5", "number":"0"},
+{"size":"45", "number":"0"},
+{"size":"46", "number":"0"}],
+"colour":"pink",
+"material":"mix",
+"season":"all",
+"description":"The return of a great classic! New version of the popular Air Max 90, now proposed in this new colorful women's model. The upper is made of premium leather and suede, with a color ranging from shades of pink to neon red midsole. Pure Platinum mesh tongue and lining, rubber details on the heel and sides. The look is completed by the unmissable Air-Unite visible.",
+"image":"img/sneakers-nike-wmns.jpg"
 }]
 }

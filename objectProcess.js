@@ -452,7 +452,7 @@ $(document).ready(function () {
         }
 
         //TODO:  Novembre
-    //TODO:Problrma inserimento passw durante registrazione
+    //TODO:Problema sistema qta quando elimino un ordine..
     //TODO:Documento di analisi dei requisti con esempi e mini presentazione
 
 
